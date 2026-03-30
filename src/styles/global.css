@@ -50,7 +50,9 @@
     transition: all 0.3s ease;
   }
 
-  a:hover {
+  /* Underline only on inline text links (paragraphs), not on buttons/nav/cards */
+  p a:hover,
+  li a:hover {
     text-decoration: underline;
   }
 
