@@ -1,0 +1,58 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Actualités | Tactisens Escape Game Toulouse" description="Retrouvez les dernieres actualites de Tactisens Escape Game a Toulouse. Nouveaux jeux, evenements, offres speciales.">
+
+  <!-- ==================== HERO COMPACT ==================== -->
+  <section class="relative min-h-[250px] flex items-end">
+    <div class="absolute inset-0">
+      <img
+        src="/images/escape-game-toulouse-tactisens-04.webp"
+        alt="Escape Game Toulouse Tactisens Actualites"
+        class="w-full h-full object-cover"
+      />
+      <div class="absolute inset-0 bg-black/60"></div>
+    </div>
+    <div class="section-content relative z-10 py-10 w-full">
+      <h1 class="font-share text-larger lg:text-colossal font-bold leading-none">Actualités</h1>
+      <nav class="text-sm mt-3 text-white/70" aria-label="Breadcrumb">
+        <a href="/" class="text-white/70 hover:text-white no-underline">Accueil</a>
+        <span class="mx-2">/</span>
+        <span class="text-white">Actualités</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- ==================== NOS DERNIERES ACTUALITES ==================== -->
+  <section class="bg-tac-dark-blue py-16 lg:py-24">
+    <div class="section-content">
+      <!-- Spirale + Titre -->
+      <div class="flex flex-col items-center mb-12 lg:mb-16">
+        <img
+          src="/images/escape-game-toulouse-tactisens-31-bis.webp"
+          alt=""
+          class="w-[60px] h-[60px] object-contain mb-6"
+        />
+        <h2 class="font-share text-larger lg:text-colossal font-bold text-center leading-none tracking-[-2px]">
+          <span class="text-tac-white">Nos dernières</span><br />
+          <span class="text-tac-orange">actualités</span>
+        </h2>
+      </div>
+
+      <!-- Placeholder -->
+      <div class="max-w-2xl mx-auto text-center">
+        <p class="text-white/80 text-big leading-relaxed mb-10">
+          Les actualités de Tactisens Escape Game Toulouse arrivent bientôt. Restez connectés !
+        </p>
+        <p class="text-white/60 text-body mb-8">
+          En attendant, suivez-nous sur les réseaux sociaux pour ne rien manquer.
+        </p>
+        <a href="https://www.facebook.com/tactisens" target="_blank" rel="noopener noreferrer" class="btn-orange">
+          Suivez-nous
+        </a>
+      </div>
+    </div>
+  </section>
+
+</Layout>
