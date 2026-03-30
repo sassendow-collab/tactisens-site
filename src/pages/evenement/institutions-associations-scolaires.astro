@@ -1,0 +1,138 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const cards = [
+  {
+    title: "Jeunesse",
+    image: "/images/sortie-toulouse-scolaire-association.webp",
+    alt: "Sortie Toulouse scolaire association jeunesse",
+    description: "Adapté à tous même au plus jeunes. L'Aventure Sensorielle est une activité à la fois amusante et didactique qui ne manque pas d'humour. Plus qu'un loisir ou une sortie, une vrai aventure !",
+    link: "/evenement/institutions-associations-scolaires/jeunesse/"
+  },
+  {
+    title: "Scolaires",
+    image: "/images/sortie-toulouse-association-scolaire.webp",
+    alt: "Sortie Toulouse association scolaire",
+    description: "Prenez la tangente de l'éducation académique ! Nous vous proposons une quête pédagogique à propos des sens pour éveiller vos élèves. Plus qu'un amusement, une vrai ouverture à l'art et la culture",
+    link: "/evenement/institutions-associations-scolaires/scolaires/"
+  },
+  {
+    title: "BDE / Associations étudiantes",
+    image: "/images/sortie-toulouse-asso-scolaire.webp",
+    alt: "Sortie Toulouse BDE associations étudiantes",
+    description: "A la recherche d'une soirée d'intégration ? Notre centre d'Escape Game peut accueillir votre classe toute entière ! Enfin si vous n'êtes pas plus de 72...",
+    link: "/evenement/institutions-associations-scolaires/bde/"
+  }
+];
+---
+
+<Layout title="Institutions, associations, scolaires | Tactisens Escape Game Toulouse" description="Escape game pour scolaires, BDE, associations et institutions à Toulouse. Activités adaptées aux jeunes et groupes. Pass Culture accepté.">
+
+  <!-- ==================== SECTION 1 : HERO ==================== -->
+  <section class="relative min-h-[600px] lg:min-h-[90vh] flex flex-col">
+    <img
+      src="/images/escape-game-association-scolaire.webp"
+      alt="Escape game institutions associations scolaires Toulouse"
+      class="absolute inset-0 w-full h-full object-cover"
+    />
+    <div class="absolute inset-0 bg-black/10"></div>
+    <div class="relative z-10 flex-1 flex flex-col justify-center section-content pt-[186px] pb-5">
+      <div class="pb-[8vw]">
+        <!-- Spiral icon centered -->
+        <div class="flex justify-center mb-[50px]">
+          <img
+            src="/images/escape-game-toulouse-tactisens-31-bis.webp"
+            alt="Tactisens spirale"
+            class="w-16 h-[60px] object-contain"
+          />
+        </div>
+
+        <!-- H1 -->
+        <h1 class="font-share text-bigger text-center uppercase tracking-[3px] leading-[1.2] font-normal text-[#b6b3b3] mb-5">
+          Sortie à Toulouse pour institutions, associations et scolaires
+        </h1>
+
+        <!-- H2 -->
+        <h2 class="font-share text-[2.5rem] lg:text-gigantic text-center text-tac-dark-blue font-bold leading-none tracking-[-3px] mb-[70px]">
+          Institutions, associations, scolaires....
+        </h2>
+
+        <!-- CTA -->
+        <div class="flex justify-center">
+          <a
+            href="/reservation/"
+            class="btn-outline-orange font-share text-[19px] uppercase tracking-[2px] px-[38px] py-5"
+          >
+            Réservez votre aventure !
+          </a>
+        </div>
+      </div>
+
+      <!-- Breadcrumb -->
+      <nav class="text-sm text-tac-dark-blue/60 text-center mt-4" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-tac-dark-blue no-underline text-tac-dark-blue/60">Accueil</a>
+        <span class="mx-2">/</span>
+        <a href="/evenement/" class="hover:text-tac-dark-blue no-underline text-tac-dark-blue/60">Évènements</a>
+        <span class="mx-2">/</span>
+        <span class="text-tac-dark-blue/80">Institutions</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 2 : TACTISENS POUR VOS ÉVÉNEMENTS ==================== -->
+  <section class="relative py-[120px]">
+    <img
+      src="/images/escape-game-toulouse-tactisens-05.webp"
+      alt="Escape Game Toulouse Tactisens événements"
+      class="absolute inset-0 w-full h-full object-cover"
+    />
+    <div class="absolute inset-0 bg-black/60"></div>
+    <div class="relative z-10 section-content px-5">
+      <div class="flex items-start gap-0 mb-8">
+        <img
+          src="/images/escape-game-toulouse-tactisens-31.webp"
+          alt="Tactisens spirale"
+          class="w-[49px] h-[50px] object-contain mr-4 mt-2"
+        />
+        <h2 class="font-share text-colossal lg:text-gigantic text-tac-white font-bold leading-none">
+          Tactisens pour<br />
+          <span class="text-tac-orange">vos évènements</span>
+        </h2>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 3 : THREE CARDS ==================== -->
+  <section class="bg-tac-dark-blue py-20 lg:py-28">
+    <div class="section-content">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {cards.map((card) => (
+          <div class="flex flex-col">
+            <div class="overflow-hidden">
+              <img
+                src={card.image}
+                alt={card.alt}
+                class="w-full aspect-[4/3] object-cover"
+              />
+            </div>
+            <div class="pt-6">
+              <h3 class="font-share text-large text-tac-orange font-bold mb-3">
+                {card.title}
+              </h3>
+              <p class="text-tac-light-gray text-body leading-relaxed mb-6">
+                {card.description}
+              </p>
+              <a
+                href={card.link}
+                class="font-share text-tac-orange uppercase tracking-[2px] text-sm font-bold hover:text-tac-white transition-colors"
+              >
+                DÉCOUVRIR TOUTES LES OFFRES
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+</Layout>

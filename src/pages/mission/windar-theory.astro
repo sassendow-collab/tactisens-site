@@ -1,0 +1,566 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="The Bunker - Escape Room à Toulouse | Tactisens" description="Escape Room The Bunker à Toulouse. De 3 à 6 joueurs, 60 minutes, à partir de 10 ans. Résolvez les énigmes du Dr Windar chez Tactisens.">
+
+  <!-- ==================== SECTION 1 : HERO BANNER ==================== -->
+  <section class="relative min-h-[600px] lg:min-h-[90vh] flex flex-col">
+    <img
+      src="/images/escape-room-toulouse-centre-ville.webp"
+      alt="Escape Room The Bunker Toulouse centre-ville"
+      class="absolute inset-0 w-full h-full object-cover"
+    />
+    <div class="absolute inset-0 bg-black/30"></div>
+    <div class="relative z-10 flex-1 flex flex-col justify-center section-content pt-[186px] pb-5">
+      <div class="pb-[8vw]">
+        <!-- Spiral icon centered -->
+        <div class="flex justify-center mb-[50px]">
+          <img
+            src="/images/escape-game-toulouse-tactisens-31-bis.webp"
+            alt="Escape Game Toulouse Tactisens"
+            class="w-16 h-[60px] object-contain"
+          />
+        </div>
+
+        <!-- H1 -->
+        <h1 class="font-share text-bigger text-center uppercase tracking-[3px] leading-[1.2] font-normal text-[#b6b3b3] mb-5">
+          escape game à Toulouse
+        </h1>
+
+        <!-- H2 -->
+        <h2 class="font-share text-[2.5rem] lg:text-gigantic text-center text-tac-white font-bold leading-none tracking-[-3px] mb-[70px]">
+          Escape Game The Bunker
+        </h2>
+
+        <!-- CTA -->
+        <div class="flex justify-center">
+          <a
+            href="/reservation/"
+            class="btn-outline-white font-share text-[19px] uppercase tracking-[2px] px-[38px] py-5"
+          >
+            Réservez votre aventure !
+          </a>
+        </div>
+      </div>
+
+      <!-- Breadcrumb -->
+      <nav class="text-sm text-white/60 text-center mt-4" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-white no-underline text-white/60">Accueil</a>
+        <span class="mx-2">/</span>
+        <a href="/mission/" class="hover:text-white no-underline text-white/60">Mission</a>
+        <span class="mx-2">/</span>
+        <span class="text-white/80">THE BUNKER</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 2 : INTRO PARAGRAPH ==================== -->
+  <section class="bg-tac-black py-20">
+    <div class="section-content text-center">
+      <p class="font-share text-bigger text-tac-white font-normal leading-[1.4]">
+        Vous êtes à la recherche d'une activité originale à Toulouse ? Trouver un lieu insolite pour vos sorties à Toulouse ? Vous connaissez les Escape Games classiques, mais connaissez-vous l'Escape Room The&nbsp;Bunker&nbsp;?
+      </p>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 3 : CONCEPT ==================== -->
+  <section class="relative" id="escape-game-concept">
+    <img
+      src="/images/escape-game-toulouse-tactisens-07.webp"
+      alt="Escape Game The Bunker Toulouse"
+      class="absolute inset-0 w-full h-full object-cover"
+    />
+    <div class="absolute inset-0 bg-black/50"></div>
+    <div class="relative z-10 section-content py-[120px] px-5">
+
+      <!-- Spiral + heading -->
+      <div class="flex items-start gap-0 mb-8">
+        <img
+          src="/images/escape-game-toulouse-tactisens-31.webp"
+          alt="Escape Room The Bunker Toulouse"
+          class="w-[49px] h-[50px] shrink-0"
+        />
+        <h2 class="pl-5 font-share text-[2.5rem] lg:text-[57px] font-bold tracking-[-2px] leading-none mb-[33px]">
+          <span class="text-tac-white">Tentez l'impossible</span><br>
+          <span class="text-tac-orange">l'évasion</span><br>
+          <span class="text-tac-orange">du Bunker</span>
+        </h2>
+      </div>
+
+      <!-- Two columns -->
+      <div class="flex flex-col lg:flex-row gap-10">
+
+        <!-- Left column -->
+        <div class="lg:w-[46.5%] lg:pr-[100px]">
+          <p class="font-share text-[26px] uppercase text-tac-orange mb-5">
+            Votre mission sera de retrouver les dangereuses recherches du docteur Windar et de vous échapper du Bunker.
+          </p>
+          <p class="font-mulish text-big font-semibold leading-[1.4] mt-5 mb-5">
+            Le Dr Windar a caché le résultat de ses recherches sur la vie éternelle dans son bunker désaffecté. Mais depuis quelque temps, nous n'avons plus aucune nouvelle de lui...
+          </p>
+          <p class="font-mulish text-big font-semibold leading-[1.4] mb-5">
+            Nous avons besoin de vous pour nous aider à récupérer ses recherches et savoir ce qui lui est arrivé ! Il faut faire vite, les résultats de ces fameuses recherches intéressent d'autres personnes qui pourraient être dangereuses.
+          </p>
+          <p class="font-mulish text-big font-semibold leading-[1.4] mb-5">
+            Serez-vous assez rapides ?
+          </p>
+        </div>
+
+        <!-- Right column: orange bordered card -->
+        <div class="lg:w-[40.5%] border border-tac-orange p-[39px] flex flex-col justify-center">
+
+          <!-- Meta row -->
+          <div class="flex flex-wrap justify-between gap-4 mb-5">
+            <div class="flex items-center gap-3">
+              <img src="/images/escape-game-toulouse-tactisens-16.webp" alt="Escape Room Toulouse joueurs" class="w-10 h-auto" />
+              <p class="font-mulish text-body font-semibold leading-[1.2] lowercase">3 à 6<br>joueurs</p>
+            </div>
+            <div class="flex items-center gap-3">
+              <img src="/images/escape-game-toulouse-tactisens-19.webp" alt="Escape Room Toulouse durée" class="w-10 h-auto" />
+              <div>
+                <p class="font-mulish text-body font-semibold leading-[1.2] lowercase">60</p>
+                <p class="font-mulish text-body font-semibold leading-[1.2] lowercase">minutes</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <img src="/images/escape-game-toulouse-tactisens-15.webp" alt="Escape Room Toulouse âge" class="w-8 h-auto" />
+              <div>
+                <p class="font-mulish text-body font-semibold leading-[1.2] lowercase">de 10 à 97</p>
+                <p class="font-mulish text-body font-semibold leading-[1.2] lowercase">ans</p>
+              </div>
+            </div>
+          </div>
+
+          <hr class="separator-orange" />
+
+          <!-- Difficulty -->
+          <div class="flex flex-wrap items-center gap-x-4 gap-y-2 py-1">
+            <p class="font-share text-body font-bold tracking-[0.02em] leading-[1.2] uppercase text-tac-orange mr-[14px]">NIVEAU DE DIFFICULTÉ :</p>
+            <div class="flex items-center gap-2">
+              <img src="/images/true.svg" alt="" class="w-4 h-4" />
+              <p class="font-mulish text-body font-semibold tracking-[0.02em] leading-[1.2]">6/10</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <img src="/images/true.svg" alt="" class="w-4 h-4" />
+              <p class="font-mulish text-body font-semibold tracking-[0.02em] leading-[1.2]">Adaptable selon le niveau des joueurs</p>
+            </div>
+          </div>
+
+          <hr class="separator-orange mb-7" />
+
+          <!-- Bullet points -->
+          <p class="font-mulish text-body font-semibold leading-[1.4] mb-5 pl-[35px] relative">
+            <img src="/images/true.svg" alt="" class="w-3 inline-block absolute left-0 top-1" />
+            Cohésion d'équipe, observation, communication et créativité seront de précieux atouts.
+          </p>
+          <p class="font-mulish text-body font-semibold leading-[1.4] mb-5 pl-[35px] relative">
+            <img src="/images/true.svg" alt="" class="w-3 inline-block absolute left-0 top-1" />
+            Accessible à tous à partir de 10 ans et sans limite d'âge, en famille, entre amis, entre collègues, toutes générations confondues.
+          </p>
+          <p class="font-mulish text-body font-semibold leading-[1.4] mb-5 pl-[35px] relative">
+            <img src="/images/true.svg" alt="" class="w-3 inline-block absolute left-0 top-1" />
+            Une difficulté adaptable. Pour novices, amateurs et maîtres de l'Escape Game !
+          </p>
+        </div>
+      </div>
+
+      <!-- CTA centered -->
+      <div class="flex justify-center mt-[60px]">
+        <a
+          href="/reservation/"
+          class="btn-orange font-share text-[1.2rem] uppercase tracking-[2px] px-[63px] py-[19px]"
+        >
+          réservez votre aventure !
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 4 : NOTRE ESCAPE GAME THE BUNKER ==================== -->
+  <section class="bg-tac-black py-[120px] px-5" id="discover-the-bunker">
+    <div class="max-w-[1440px] mx-auto">
+      <div class="flex flex-col lg:flex-row items-center gap-10">
+
+        <!-- Left: image -->
+        <div class="lg:w-[48.7%]">
+          <img
+            src="/images/IMG_4348-1024x768.jpg"
+            alt="Notre Escape Game The Bunker Toulouse"
+            class="w-full aspect-[4/3] object-cover"
+          />
+        </div>
+
+        <!-- Right: spiral + heading -->
+        <div class="lg:flex-1 lg:pl-20">
+          <div class="flex items-start gap-0">
+            <img
+              src="/images/escape-game-toulouse-tactisens-31.webp"
+              alt=""
+              class="w-[49px] h-[50px] shrink-0"
+            />
+            <h2 class="pl-5 font-share text-colossal font-bold tracking-[-2px] capitalize leading-none">
+              <span class="text-tac-white">Notre escape game</span><br>
+              <span class="text-tac-orange">The Bunker</span>
+            </h2>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="flex justify-center mt-[60px]">
+        <a
+          href="/reservation/"
+          class="btn-outline-orange font-share text-[1.2rem] uppercase tracking-[2px] px-[61px] py-[17px]"
+        >
+          Réservez votre aventure !
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 5 : TARIFS ==================== -->
+  <section class="relative" id="bunker-rates">
+    <img
+      src="/images/tarrif-windar-theory.svg"
+      alt="Escape Room The Bunker Toulouse tarifs"
+      class="absolute inset-0 w-full h-full object-cover object-[0%_50%]"
+    />
+    <div class="absolute inset-0 bg-black/50"></div>
+    <div class="relative z-10 section-content py-20 px-5">
+      <div class="flex flex-col lg:flex-row">
+        <!-- Spacer left -->
+        <div class="hidden lg:block lg:w-1/4"></div>
+
+        <!-- Center content -->
+        <div class="lg:w-1/2">
+          <!-- Spiral + heading -->
+          <div class="flex items-center gap-0 mb-20">
+            <img
+              src="/images/escape-game-toulouse-tactisens-31.webp"
+              alt=""
+              class="w-[49px] h-[50px] shrink-0"
+            />
+            <h2 class="pl-5 font-share text-colossal font-bold tracking-[-3px] leading-none">
+              <span class="text-tac-white">Tarifs </span><span class="text-tac-orange">The&nbsp;Bunker</span>
+            </h2>
+          </div>
+
+          <!-- Pricing -->
+          <p class="font-mulish text-big font-extrabold leading-[1.6] my-5">
+            Equipe de 5 joueurs et + : <span class="text-tac-orange">29 € par personne</span><br>
+            Equipe de 4 joueurs : <span class="text-tac-orange">32 € par personne</span><br>
+            Equipe de 3 joueurs : <span class="text-tac-orange">39 € par personne</span><br>
+            Equipe de 2 joueurs : <span class="text-tac-orange">45 € par personne</span>
+          </p>
+
+          <!-- Buttons -->
+          <div class="flex flex-wrap gap-4 mt-8">
+            <a
+              href="/reservation/"
+              class="btn-orange font-share text-[1.22rem] w-[240px] text-center"
+            >
+              réserver
+            </a>
+            <a
+              href="/carte-cadeau/"
+              class="btn-outline-orange font-share text-[1.22rem] w-[315px] text-center"
+            >
+              offrir un bon cadeau
+            </a>
+          </div>
+        </div>
+
+        <!-- Spacer right -->
+        <div class="hidden lg:block lg:w-1/4"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 6 : UN ESCAPE GAME IMMERSIF (WHITE bg) ==================== -->
+  <section class="bg-tac-white text-tac-black py-20 px-5">
+    <div class="max-w-[1440px] mx-auto">
+      <div class="flex flex-col lg:flex-row gap-10 items-center">
+
+        <!-- Left: image -->
+        <div class="lg:w-1/2 lg:pr-[3.5%]">
+          <img
+            src="/images/IMG_4287-scaled.jpg"
+            alt="Escape Game immersif The Bunker Toulouse"
+            class="w-full aspect-[4/3] object-cover"
+          />
+        </div>
+
+        <!-- Right: text -->
+        <div class="lg:w-1/2 lg:pl-[3.5%]">
+          <!-- Spiral + heading -->
+          <div class="flex items-center gap-0 mb-[30px]">
+            <img
+              src="/images/escape-game-toulouse-tactisens-31.webp"
+              alt=""
+              class="w-[49px] h-[50px] shrink-0"
+            />
+            <h3 class="pl-[10px] font-share text-colossal font-bold tracking-[-3px] leading-none text-tac-black">
+              Un Escape Game immersif au c&#339;ur de&nbsp;Toulouse
+            </h3>
+          </div>
+
+          <h5 class="font-share text-bigger font-bold uppercase leading-[1.4] text-tac-orange mb-[30px]">
+            DÉCOUVREZ vos talents d'aventuriers
+          </h5>
+
+          <p class="font-mulish text-body font-semibold leading-relaxed text-tac-black">
+            Vous n'avez pas peur de vous faire enfermer dans notre Escape Room en plein centre-ville de Toulouse ?
+            Vous pensez pouvoir donner le meilleur de vous-même malgré la pression ?
+            Si vous pensez avoir le cran nécessaire pour résoudre les énigmes et les puzzles du Dr Windar, notre salle d'Escape Game est faite pour vous !
+            Nous verrons bien une fois que les pièges de son bunker se refermeront sur vous.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 7 : L'ESCAPE GAME DANS TOUTE SA SPLENDEUR (WHITE bg) ==================== -->
+  <section class="bg-tac-white text-tac-black py-20 px-5">
+    <div class="max-w-[1440px] mx-auto">
+      <div class="flex flex-col lg:flex-row gap-10 items-center">
+
+        <!-- Left: text -->
+        <div class="lg:w-1/2 lg:pr-[3.5%] order-2 lg:order-1">
+          <h5 class="font-share text-bigger font-bold uppercase leading-[1.4] text-tac-orange mb-[30px]">
+            l'Escape game dans toute sa splendeur
+          </h5>
+
+          <p class="font-mulish text-body font-semibold leading-relaxed text-tac-black">
+            Oserez-vous pénétrer dans le bunker désaffecté où s'est réfugié le Dr Windar pour protéger ses recherches sur la vie éternelle ?
+            Déjouez les pièges qu'il a laissés derrière lui, suivez sa piste et récupérez ses recherches.
+            Vous n'aurez que 60 minutes pour sauver l'humanité ! Après ce compte à rebours, personne ne sait ce qu'il adviendra de vous.
+          </p>
+        </div>
+
+        <!-- Right: image -->
+        <div class="lg:w-1/2 lg:pl-[3.5%] order-1 lg:order-2">
+          <img
+            src="/images/escape-game-toulouse-centre-ville.webp"
+            alt="Escape Game The Bunker Toulouse centre-ville"
+            class="w-full"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 8 : NOS CONSEILS EN IMAGE (CAROUSEL) ==================== -->
+  <section class="relative" id="bunker-tips-carousel">
+    <img
+      src="/images/escape-game-toulouse-tactisens-05.webp"
+      alt="Escape Game Toulouse conseils"
+      class="absolute inset-0 w-full h-full object-cover"
+    />
+    <div class="absolute inset-0 bg-black/50"></div>
+    <div class="relative z-10 section-content py-[120px] px-5">
+
+      <!-- Spiral + heading -->
+      <div class="flex items-start gap-0 mb-[45px]">
+        <img
+          src="/images/escape-game-toulouse-tactisens-31.webp"
+          alt=""
+          class="w-[49px] h-[50px] shrink-0"
+        />
+        <h2 class="pl-5 font-share text-[2.5rem] lg:text-[57px] font-bold tracking-[-2px] leading-none text-tac-white">
+          Nos conseils en image
+        </h2>
+      </div>
+
+      <!-- Carousel -->
+      <div class="relative overflow-hidden" id="tips-carousel">
+        <div class="flex transition-transform duration-500 ease-in-out" id="carousel-track">
+          <!-- Slide 1 -->
+          <div class="w-full flex-shrink-0">
+            <div class="max-w-[800px] mx-auto">
+              <img
+                src="/images/IMG_4213-scaled.jpg"
+                alt="Escape Room The Bunker énigmes"
+                class="w-full aspect-[16/9] object-cover mb-6"
+              />
+              <p class="font-mulish text-big font-semibold text-tac-white text-center">
+                Tentez de vous échapper du Bunker en résolvant les énigmes
+              </p>
+            </div>
+          </div>
+          <!-- Slide 2 -->
+          <div class="w-full flex-shrink-0">
+            <div class="max-w-[800px] mx-auto">
+              <img
+                src="/images/IMG_4348-1024x768.jpg"
+                alt="Escape Room The Bunker immersion"
+                class="w-full aspect-[16/9] object-cover mb-6"
+              />
+              <p class="font-mulish text-big font-semibold text-tac-white text-center">
+                Restez attentif et prenez en plein les yeux !
+              </p>
+            </div>
+          </div>
+          <!-- Slide 3 -->
+          <div class="w-full flex-shrink-0">
+            <div class="max-w-[800px] mx-auto">
+              <img
+                src="/images/escape-game-toulouse-theme-scientifique.webp"
+                alt="Escape Room The Bunker protection"
+                class="w-full aspect-[16/9] object-cover mb-6"
+              />
+              <p class="font-mulish text-big font-semibold text-tac-white text-center">
+                N'oubliez pas de vous protéger !
+              </p>
+            </div>
+          </div>
+          <!-- Slide 4 -->
+          <div class="w-full flex-shrink-0">
+            <div class="max-w-[800px] mx-auto">
+              <img
+                src="/images/IMG_4284-1024x768.jpg"
+                alt="Escape Room The Bunker curiosité"
+                class="w-full aspect-[16/9] object-cover mb-6"
+              />
+              <p class="font-mulish text-big font-semibold text-tac-white text-center">
+                La curiosité n'est pas un défaut ici. Mais restez prudent !
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dots navigation -->
+        <div class="flex justify-center gap-3 mt-8" id="carousel-dots">
+          <button class="w-3 h-3 rounded-full bg-tac-orange cursor-pointer carousel-dot" data-slide="0" aria-label="Slide 1"></button>
+          <button class="w-3 h-3 rounded-full bg-white/40 cursor-pointer carousel-dot" data-slide="1" aria-label="Slide 2"></button>
+          <button class="w-3 h-3 rounded-full bg-white/40 cursor-pointer carousel-dot" data-slide="2" aria-label="Slide 3"></button>
+          <button class="w-3 h-3 rounded-full bg-white/40 cursor-pointer carousel-dot" data-slide="3" aria-label="Slide 4"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 9 : FAQ ==================== -->
+  <section class="bg-tac-light-gray py-20 px-5" id="tac-faq-panel" itemscope itemtype="https://schema.org/FAQPage">
+    <div class="max-w-[1440px] mx-auto">
+
+      <!-- Spiral + heading -->
+      <div class="flex items-start gap-0 mb-[45px]">
+        <img
+          src="/images/escape-game-toulouse-tactisens-31.webp"
+          alt="Escape Game Toulouse foire aux questions"
+          class="w-[49px] h-[50px] shrink-0"
+        />
+        <h2 class="pl-5 font-share text-[57px] font-bold tracking-[-3px] leading-none uppercase text-tac-black">
+          FAQ
+        </h2>
+      </div>
+
+      <!-- FAQ items -->
+      <div class="space-y-0">
+        <!-- FAQ 1 -->
+        <div class="faq-item border-b border-black/10" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" data-faq>
+          <button class="faq-toggle w-full flex items-center justify-between py-5 text-left cursor-pointer" aria-expanded="false">
+            <h5 class="font-share text-bigger font-bold text-tac-black pr-4" itemprop="name">L'Escape Room, qu'est-ce que c'est ?</h5>
+            <span class="faq-icon font-share text-2xl text-tac-orange shrink-0 transition-transform">+</span>
+          </button>
+          <div class="faq-content hidden pb-5" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <p class="font-mulish text-body text-tac-black leading-relaxed" itemprop="text">L'Escape Game, aussi appelé "Jeu d'évasion grandeur nature" ou "Escape Room", est une expérience ludique et immersive pour un groupe de 2 à 6 joueurs. Vous serez enfermés dans une ou plusieurs salles avec un objectif principal, celui de mener à bien une mission dans un temps imparti de 60 minutes. La salle comporte des indices, des mécanismes et des éléments de surprise. Un Escape Game grandeur nature est un jeu d'équipe qui fait la part belle aux qualités humaines.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item border-b border-black/10" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" data-faq>
+          <button class="faq-toggle w-full flex items-center justify-between py-5 text-left cursor-pointer" aria-expanded="false">
+            <h5 class="font-share text-bigger font-bold text-tac-black pr-4" itemprop="name">Que se passe-t-il pendant votre Escape Room ?</h5>
+            <span class="faq-icon font-share text-2xl text-tac-orange shrink-0 transition-transform">+</span>
+          </button>
+          <div class="faq-content hidden pb-5" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <p class="font-mulish text-body text-tac-black leading-relaxed" itemprop="text">Après une explication vous permettant de découvrir votre mission ainsi que les règles générales du jeu, votre Game Master vous enferme dans la salle. Vous avez alors 60 minutes de jeu. Votre mission, si vous l'acceptez : fouiller, chercher, trouver des indices, décoder des messages, actionner des mécanismes, résoudre des énigmes et accomplir votre mission ! Votre Game Master suit vos avancées en temps réel et vous envoie des indices si vous bloquez trop longtemps.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item border-b border-black/10" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" data-faq>
+          <button class="faq-toggle w-full flex items-center justify-between py-5 text-left cursor-pointer" aria-expanded="false">
+            <h5 class="font-share text-bigger font-bold text-tac-black pr-4" itemprop="name">À qui sont destinés les Escape Room ?</h5>
+            <span class="faq-icon font-share text-2xl text-tac-orange shrink-0 transition-transform">+</span>
+          </button>
+          <div class="faq-content hidden pb-5" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <p class="font-mulish text-body text-tac-black leading-relaxed" itemprop="text">Les Escape Room sont destinés aux individus qui aiment s'amuser en jouant en équipe et qui recherchent une sortie insolite à Toulouse. Pour fêter un anniversaire original, un enterrement de vie de jeune fille ou de garçon, un team building entreprise, ou simplement pour passer un moment mémorable, l'Escape Room est l'activité parfaite.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item border-b border-black/10" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" data-faq>
+          <button class="faq-toggle w-full flex items-center justify-between py-5 text-left cursor-pointer" aria-expanded="false">
+            <h5 class="font-share text-bigger font-bold text-tac-black pr-4" itemprop="name">À partir de quel âge peut-on jouer un Escape Game ?</h5>
+            <span class="faq-icon font-share text-2xl text-tac-orange shrink-0 transition-transform">+</span>
+          </button>
+          <div class="faq-content hidden pb-5" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <p class="font-mulish text-body text-tac-black leading-relaxed" itemprop="text">Notre Live Escape Game est accessible à partir de 10 ans. La présence d'un adulte est obligatoire dans l'équipe pour les mineurs.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="faq-item border-b border-black/10" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" data-faq>
+          <button class="faq-toggle w-full flex items-center justify-between py-5 text-left cursor-pointer" aria-expanded="false">
+            <h5 class="font-share text-bigger font-bold text-tac-black pr-4" itemprop="name">Quel est le rôle du game master ?</h5>
+            <span class="faq-icon font-share text-2xl text-tac-orange shrink-0 transition-transform">+</span>
+          </button>
+          <div class="faq-content hidden pb-5" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <p class="font-mulish text-body text-tac-black leading-relaxed" itemprop="text">Au cours de cette dernière décennie, les jeux ont grandement évolué, ce qui a entraîné l'apparition de nouveaux rôles, dont celui de Game Master. Ce dernier assure l'accueil des participants, le briefing, le suivi de la session en direct et le débriefing. Il est votre ange gardien tout au long de l'expérience.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<script>
+  // FAQ accordion toggle with data-faq attribute
+  document.querySelectorAll('[data-faq] .faq-toggle').forEach(button => {
+    button.addEventListener('click', () => {
+      const content = button.nextElementSibling;
+      const icon = button.querySelector('.faq-icon');
+      const isOpen = !content.classList.contains('hidden');
+
+      // Close all others
+      document.querySelectorAll('[data-faq] .faq-content').forEach(c => c.classList.add('hidden'));
+      document.querySelectorAll('[data-faq] .faq-icon').forEach(i => i.textContent = '+');
+      document.querySelectorAll('[data-faq] .faq-toggle').forEach(b => b.setAttribute('aria-expanded', 'false'));
+
+      if (!isOpen) {
+        content.classList.remove('hidden');
+        icon.textContent = '\u2212';
+        button.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+
+  // Carousel navigation
+  const track = document.getElementById('carousel-track');
+  const dots = document.querySelectorAll('.carousel-dot');
+  let currentSlide = 0;
+
+  function goToSlide(index) {
+    currentSlide = index;
+    track.style.transform = `translateX(-${index * 100}%)`;
+    dots.forEach((dot, i) => {
+      dot.classList.toggle('bg-tac-orange', i === index);
+      dot.classList.toggle('bg-white/40', i !== index);
+    });
+  }
+
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      goToSlide(parseInt(dot.dataset.slide));
+    });
+  });
+
+  // Auto-advance every 5 seconds
+  setInterval(() => {
+    goToSlide((currentSlide + 1) % 4);
+  }, 5000);
+</script>

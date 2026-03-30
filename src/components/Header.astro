@@ -1,0 +1,129 @@
+---
+const navItems = [
+  {
+    label: "Nos Escape Games",
+    href: "#",
+    children: [
+      { label: "Aventure Sensorielle", href: "/mission/laventure-sensorielle/" },
+      { label: "The Bunker", href: "/mission/windar-theory/" },
+    ],
+  },
+  {
+    label: "Vos Evènements",
+    href: "/evenement/",
+    children: [
+      { label: "Entreprises", href: "/evenement/entreprises/" },
+      { label: "Particuliers", href: "/evenement/particuliers/" },
+      { label: "Institutions & Associations", href: "/evenement/institutions-associations-scolaires/" },
+    ],
+  },
+  { label: "Bon Cadeau", href: "/carte-cadeau/" },
+  { label: "FAQ", href: "/faq/" },
+  { label: "Contact", href: "/contact/" },
+];
+---
+
+<header class="fixed top-0 left-0 w-full z-50 bg-tac-dark-blue" id="site-header">
+  <div class="flex items-center justify-between px-5 h-[100px]">
+    <!-- Logo -->
+    <a href="/" class="flex-shrink-0">
+      <img
+        src="/images/logo-tactisens.svg"
+        alt="Tactisens Escape Game Toulouse"
+        class="h-[61px] w-auto"
+      />
+    </a>
+
+    <!-- Desktop Nav -->
+    <nav class="hidden lg:flex items-center gap-8 flex-1 justify-center">
+      {navItems.map((item) => (
+        <div class="relative group">
+          <a
+            href={item.href}
+            class="font-share text-[17px] font-bold uppercase tracking-[1px] text-white hover:text-tac-orange hover:no-underline flex items-center gap-1 py-8 whitespace-nowrap transition-colors"
+          >
+            {item.label}
+            {item.children && (
+              <svg class="w-3.5 h-3.5 text-tac-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
+              </svg>
+            )}
+          </a>
+          {item.children && (
+            <div class="absolute top-full left-0 hidden group-hover:block pt-0 min-w-[260px]">
+              <div class="bg-white border-b-[5px] border-tac-orange py-1 px-5 shadow-lg">
+                {item.children.map((child) => (
+                  <a
+                    href={child.href}
+                    class="block py-3 text-black font-mulish font-semibold text-[15px] hover:text-tac-orange hover:no-underline border-b border-gray-200 last:border-b-0 transition-colors"
+                  >
+                    {child.label}
+                  </a>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+      ))}
+    </nav>
+
+    <!-- CTA + Lang -->
+    <div class="hidden lg:flex items-center gap-3 flex-shrink-0">
+      <a href="/reservation/" class="relative bg-tac-orange text-white font-share font-semibold text-[18px] uppercase tracking-[1px] pl-[75px] pr-3 py-[15px] leading-tight hover:no-underline hover:bg-[#d94420] transition-colors">
+        <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-[50px] h-[50px]" viewBox="0 0 50 50" fill="none">
+          <circle cx="25" cy="25" r="22" stroke="currentColor" stroke-width="2"/>
+          <path d="M20 14l13 11-13 11" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Reserver<br/>votre aventure
+      </a>
+      <!-- Language flag -->
+      <div class="flex items-center gap-1 cursor-pointer">
+        <img src="/images/france.png" alt="FR" class="w-6 h-6 rounded-full" />
+        <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
+        </svg>
+      </div>
+    </div>
+
+    <!-- Mobile Hamburger -->
+    <button id="mobile-menu-btn" class="lg:hidden text-white p-2" aria-label="Ouvrir le menu">
+      <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden lg:hidden bg-white text-black px-5 pb-6 pt-2 max-h-[80vh] overflow-y-auto">
+    {navItems.map((item) => (
+      <div class="border-b border-gray-200">
+        <a href={item.href} class="block py-4 font-share font-bold uppercase text-sm tracking-wide text-black hover:text-tac-orange hover:no-underline">
+          {item.label}
+        </a>
+        {item.children && (
+          <div class="pl-4 pb-3">
+            {item.children.map((child) => (
+              <a href={child.href} class="block py-2 text-sm font-mulish font-semibold text-gray-700 hover:text-tac-orange hover:no-underline">
+                {child.label}
+              </a>
+            ))}
+          </div>
+        )}
+      </div>
+    ))}
+    <a href="/reservation/" class="btn-orange block text-center mt-4 text-sm">
+      Reserver votre aventure
+    </a>
+  </div>
+</header>
+
+<!-- Spacer for fixed header -->
+<div class="h-[100px]"></div>
+
+<script>
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  btn?.addEventListener('click', () => {
+    menu?.classList.toggle('hidden');
+  });
+</script>

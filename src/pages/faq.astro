@@ -1,0 +1,334 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const faqCategories = [
+  {
+    id: "choisir",
+    title: "Choisir les meilleurs Escape Game et activites a Tactisens",
+    items: [
+      {
+        question: "The Bunker, qu'est-ce que c'est ?",
+        answer: "The Bunker vous plonge dans le bunker du Dr Windar pour une mission speciale : sauver l'humanite. De 3 a 6 joueurs par equipe, ou jusqu'a 12 en Mode Duel. Decors entierement immersifs, 60 minutes pour resoudre les enigmes, decouvrir des passages secrets et activer des mecanismes. Un Game Master suit vos avancees en temps reel. Aucune connaissance specifique requise : communication, fouille et cooperation sont vos meilleurs atouts. Session totale d'environ 1h30 : accueil et briefing (15 min), mission (60 min max), debriefing et photo souvenir (15 min)."
+      },
+      {
+        question: "L'Aventure Sensorielle, qu'est-ce que c'est ?",
+        answer: "L'Aventure Sensorielle vous fait vivre les etranges experiences scientifiques du Dr Windar sur vos cinq sens. Un protocole de plus de 100 m2, 5 salles, 5 sens. De 3 a 12 joueurs. Une bonne cohesion d'equipe et une communication efficace sont indispensables. Session d'environ 1h30 : accueil (15 min), mission (60 min max), debriefing (15 min)."
+      },
+      {
+        question: "Est-ce que l'Aventure Sensorielle est un Escape Game ?",
+        answer: "Oui, mais en version decalee, originale et atypique. L'espace est bien plus grand qu'un escape game classique. Pas de risque de blocage : vous parcourez l'integralite du parcours, c'est votre score qui change. L'experience est plus conviviale, ludique et axee sur le partage. Jusqu'a 12 participants. L'objectif : realiser les meilleurs temps et reussir 100% des epreuves. Des records sont a battre. Chaque epreuve a un temps imparti, et vous etes en contact permanent avec le Dr Windar et le Game Master."
+      },
+      {
+        question: "Les Escape Game sont-ils disponibles en anglais et en espagnol ?",
+        answer: "Oui, nos experiences sont disponibles en francais, en anglais et en espagnol. Vous pouvez choisir la langue souhaitee lors de votre reservation, dans la section \"Personnalisez votre seance\"."
+      },
+      {
+        question: "Quelles sont les offres dediees aux particuliers ?",
+        answer: "Nous proposons des formules adaptees a chaque occasion : EVJF (enterrement de vie de jeune fille), EVG (enterrement de vie de garcon), anniversaire enfant, anniversaire adolescent, anniversaire adulte, ainsi que le Mode Duel pour des affrontements entre equipes."
+      },
+      {
+        question: "Quelles sont les offres dediees aux entreprises ?",
+        answer: "Nous proposons des formules team building, recrutement et CE/CSE. Tactisens dispose d'une salle de reunion, d'un espace de reception et peut organiser des cocktails. Nous accueillons des groupes jusqu'a 72 personnes et offrons la privatisation de nos 340 m2."
+      },
+      {
+        question: "Comment organiser un Team Building ?",
+        answer: "Contactez-nous par telephone ou via notre formulaire en ligne. Nous etablissons un devis personnalise adapte a vos besoins, de 3 a 72 participants."
+      },
+    ]
+  },
+  {
+    id: "qui-peut-jouer",
+    title: "Qui peut jouer aux Escape Games de Tactisens ?",
+    items: [
+      {
+        question: "A partir de quel age peut-on jouer ?",
+        answer: "L'Aventure Sensorielle est accessible des 7 ans. Pour les 7-11 ans : 1 adulte accompagnateur pour 6 enfants. Pour les 12-14 ans : 1 adulte pour 8 enfants. Les 13-14 ans peuvent jouer sans adulte avec un accord ecrit des parents (6 joueurs max). The Bunker est accessible des 10 ans. Pour les 10-13 ans : 1 adulte obligatoire dans l'equipe. Pour les 13-14 ans : adulte conseille, possible sans adulte avec accord ecrit des parents."
+      },
+      {
+        question: "Vos Escape Game sont pour les jeunes uniquement ?",
+        answer: "Pas du tout. Nos experiences sont transgenerationnelles, concues pour les joueurs de 7 a 97 ans. Les jeux sont identiques pour les enfants et les adultes, mais les enjeux et la difficulte ressentie sont differents."
+      },
+      {
+        question: "Est-ce qu'une femme enceinte peut jouer ?",
+        answer: "Felicitations ! Oui, nos escape games ne demandent aucun effort physique. Il faut pouvoir rester debout environ 1 heure maximum, une chaise est disponible si besoin. Pour l'Aventure Sensorielle, une sortie aux toilettes est possible en cours de partie. Pour The Bunker, toute sortie de la salle met fin a la partie. A noter : certains effets de surprise peuvent survenir durant l'experience."
+      },
+    ]
+  },
+  {
+    id: "equipe",
+    title: "Constituer son equipe d'Escape Game",
+    items: [
+      {
+        question: "Combien de personnes peuvent jouer par equipe ?",
+        answer: "L'Aventure Sensorielle accueille de 3 a 12 joueurs par equipe. The Bunker accueille de 3 a 6 joueurs par equipe, ou jusqu'a 12 en mode Duel."
+      },
+      {
+        question: "Quel est le nombre maximum de joueurs par equipe ?",
+        answer: "12 joueurs pour l'Aventure Sensorielle. 6 joueurs pour The Bunker (ou 12 en mode Duel avec 2 equipes de 6)."
+      },
+      {
+        question: "Est-il possible de realiser une mission a 2 joueurs ?",
+        answer: "Pour The Bunker, oui, il est possible de jouer a 2 joueurs (tarif de 45 euros par personne). Pour l'Aventure Sensorielle, le minimum est de 3 joueurs."
+      },
+      {
+        question: "Je n'ai pas de coequipier, puis-je venir en solo ?",
+        answer: "Non, il faut etre au minimum 2 joueurs pour The Bunker et 3 joueurs pour l'Aventure Sensorielle."
+      },
+      {
+        question: "Que faire si l'un des joueurs ne peut pas venir ?",
+        answer: "Contactez-nous pour modifier votre reservation. La reduction du nombre de joueurs est possible sous reserve de respecter le minimum requis."
+      },
+      {
+        question: "Des joueurs supplementaires peuvent se joindre a la derniere minute ?",
+        answer: "Oui, sous reserve de disponibilite. Contactez-nous pour verifier que nous pouvons accueillir des joueurs supplementaires."
+      },
+      {
+        question: "Si nous sommes un grand groupe, est-il possible de jouer a plusieurs equipes ?",
+        answer: "Oui ! Nous accueillons jusqu'a 72 personnes. Nous organisons des rotations sur nos 2 missions, avec un espace de reception pour les equipes en attente."
+      },
+      {
+        question: "Peut-on jouer une equipe contre l'autre ?",
+        answer: "Oui ! Le Mode Duel permet de s'affronter dans 2 salles identiques de The Bunker, jusqu'a 12 joueurs (2 equipes de 6)."
+      },
+    ]
+  },
+  {
+    id: "reservation",
+    title: "Reservation et paiement",
+    items: [
+      {
+        question: "Faut-il payer pour reserver ?",
+        answer: "Non, la reservation est entierement gratuite. Le paiement s'effectue sur place le jour de votre venue."
+      },
+      {
+        question: "Quel est le tarif d'un Escape Game ?",
+        answer: "A partir de 29 euros par personne. Le tarif est degressif selon le nombre de joueurs. Retrouvez tous les details sur notre page Tarifs."
+      },
+      {
+        question: "Quels sont les moyens de paiement possibles ?",
+        answer: "Nous acceptons les cartes bancaires, les especes, les cheques vacances ANCV et les virements bancaires (pour les entreprises)."
+      },
+      {
+        question: "Puis-je payer en Cheques Vacances ANCV ?",
+        answer: "Oui, les cheques vacances ANCV sont acceptes sur place."
+      },
+      {
+        question: "Je suis un professionnel, puis-je demander un devis ?",
+        answer: "Oui, contactez-nous par telephone ou formulaire. Nous etablissons un devis personnalise gratuit adapte a vos besoins."
+      },
+      {
+        question: "Comment effectuer une reservation ?",
+        answer: "Vous pouvez reserver en ligne via notre portail de reservation ou par telephone au 05 34 59 45 81."
+      },
+      {
+        question: "Puis-je annuler ma reservation ?",
+        answer: "Oui, l'annulation est gratuite jusqu'a 48 heures avant la session. Au-dela, nous consulter."
+      },
+      {
+        question: "Puis-je modifier ma reservation ?",
+        answer: "Oui, la modification est possible sous reserve de disponibilite. Contactez-nous pour effectuer le changement."
+      },
+      {
+        question: "Est-il possible d'offrir une experience Tactisens en cadeau ?",
+        answer: "Oui ! Nous proposons des bons cadeaux a partir de 20 euros, valables 1 an."
+      },
+    ]
+  },
+  {
+    id: "infos-pratiques",
+    title: "Informations pratiques",
+    items: [
+      {
+        question: "Quelle est l'adresse et quels sont les moyens d'acces ?",
+        answer: "Tactisens se situe au 33 Port Saint-Sauveur, 31000 Toulouse. En metro : station Francois Verdier (5 min a pied). En bus : lignes 14, 22, 27, 38, L1. En voiture : parking gratuit devant l'etablissement (dont 2 places PMR), parkings Paul Sabatier et Carnot a proximite. En velo : station VeloToulouse a proximite."
+      },
+      {
+        question: "A quelle heure doit-on arriver ?",
+        answer: "Nous vous demandons d'arriver 15 minutes avant le debut de votre session pour l'accueil et le briefing."
+      },
+      {
+        question: "Que se passe-t-il si on est en retard ?",
+        answer: "Le temps de jeu sera reduit du temps de retard. Au-dela de 15 minutes de retard, la session peut etre annulee."
+      },
+      {
+        question: "Quels sont les horaires d'ouverture ?",
+        answer: "Lundi au jeudi : 10h-23h30. Vendredi : 10h-00h30. Samedi : 9h-00h30. Dimanche : 10h-23h. Ouvert sur reservation uniquement."
+      },
+      {
+        question: "Ou trouver les photos de notre passage ?",
+        answer: "Les photos sont prises par notre equipe pendant votre session et vous sont envoyees par email apres votre passage."
+      },
+    ]
+  },
+  {
+    id: "securite",
+    title: "Informations generales et securite",
+    items: [
+      {
+        question: "Les salles sont-elles climatisees ?",
+        answer: "Oui, toutes nos salles sont climatisees pour votre confort."
+      },
+      {
+        question: "Les Escape Game sont-ils vraiment securises ?",
+        answer: "Oui, Tactisens dispose de toutes les autorisations delivrees par la Direction de la Securite Civile et des Risques Majeurs. Des sorties de secours sont accessibles a tout moment."
+      },
+      {
+        question: "Sommes-nous filmes ?",
+        answer: "Oui, des cameras de surveillance sont presentes pour la securite et le suivi de votre progression par le Game Master. Les images ne sont pas conservees."
+      },
+      {
+        question: "Sommes-nous vraiment enfermes ?",
+        answer: "Non ! Vous pouvez sortir a tout moment. Les portes ne sont jamais verrouillees."
+      },
+      {
+        question: "Je suis claustrophobe ou j'ai peur du noir ?",
+        answer: "Nos espaces sont grands (100 m2 pour l'Aventure Sensorielle). Il n'y a pas de confinement extreme. Quelques moments sombres peuvent survenir mais restent brefs. N'hesitez pas a nous prevenir a l'avance pour que nous adaptions votre experience."
+      },
+    ]
+  },
+  {
+    id: "accessibilite",
+    title: "Accessibilite",
+    items: [
+      {
+        question: "Les Escape Game sont-ils accessibles a tous ?",
+        answer: "Oui, nos experiences sont concues pour etre inclusives. Des adaptations sont possibles selon vos besoins. N'hesitez pas a nous contacter en amont."
+      },
+      {
+        question: "Accessibles aux personnes a mobilite reduite (PMR) ?",
+        answer: "Oui, notre espace d'accueil et nos salles sont accessibles aux personnes a mobilite reduite."
+      },
+      {
+        question: "Accessibles aux personnes malvoyantes ?",
+        answer: "Oui, l'Aventure Sensorielle est particulierement adaptee car elle sollicite les sens autres que la vue."
+      },
+      {
+        question: "Accessibles aux personnes malentendantes ?",
+        answer: "Oui, des adaptations visuelles sont possibles. Prevenez-nous a l'avance pour que nous preparions votre session."
+      },
+    ]
+  },
+];
+
+// Flatten all FAQ items for schema.org
+const allFaqItems = faqCategories.flatMap(cat => cat.items);
+---
+
+<Layout title="FAQ Escape Game Toulouse : Questions & Reponses | Tactisens" description="Toutes les reponses a vos questions sur nos escape games a Toulouse. Age minimum, tarifs, duree, accessibilite, reservation.">
+
+  <!-- Hero Banner (compact, dark) -->
+  <section class="relative min-h-[250px] lg:min-h-[300px] flex items-end bg-tac-dark-blue">
+    <div class="absolute inset-0">
+      <img
+        src="/images/escape-game-toulouse-tactisens-04.webp"
+        alt="Escape Game Toulouse Tactisens FAQ"
+        class="w-full h-full object-cover opacity-30"
+      />
+    </div>
+    <div class="section-content relative z-10 py-12 lg:py-16 w-full">
+      <h1 class="font-share text-colossal lg:text-gigantic font-bold uppercase tracking-[-2px] lg:tracking-[-4px] leading-[0.95]">
+        FAQ Escape Game :<br />Questions & Reponses
+      </h1>
+      <nav class="text-sm mt-4 font-mulish text-white/70">
+        <a href="/" class="text-white/70 hover:text-white no-underline">Accueil</a>
+        <span class="mx-2">/</span>
+        <span class="text-white">FAQ Escape Game : Questions & Reponses</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- FAQ Section (2 columns: sidebar + accordion) -->
+  <section class="bg-tac-light-gray py-16 lg:py-24">
+    <div class="section-content">
+      <div class="flex flex-col lg:flex-row gap-10 lg:gap-16">
+
+        <!-- LEFT: Sticky sidebar -->
+        <aside class="lg:w-[280px] shrink-0">
+          <div class="lg:sticky lg:top-8">
+            <h2 class="font-share text-body font-bold uppercase tracking-widest text-tac-black mb-6">Categories FAQ</h2>
+            <nav class="flex flex-col gap-0">
+              {faqCategories.map((category) => (
+                <a
+                  href={`#${category.id}`}
+                  class="block border-l-4 border-tac-orange pl-4 py-3 font-mulish font-bold text-sm text-tac-black leading-snug no-underline hover:text-tac-orange transition-colors"
+                >
+                  {category.title}
+                </a>
+              ))}
+            </nav>
+          </div>
+        </aside>
+
+        <!-- RIGHT: FAQ accordion grouped by category -->
+        <div class="flex-1 min-w-0">
+          {faqCategories.map((category, catIndex) => (
+            <div id={category.id} class={catIndex > 0 ? "mt-14" : ""}>
+              <h3 class="font-share text-bigger lg:text-large text-tac-orange italic font-bold mb-6 leading-tight">
+                {category.title}
+              </h3>
+              <div class="space-y-3">
+                {category.items.map((faq) => (
+                  <div class="bg-white rounded-lg overflow-hidden" data-faq>
+                    <button class="faq-toggle w-full flex items-center justify-between px-6 py-5 text-left cursor-pointer" aria-expanded="false">
+                      <span class="font-mulish font-bold text-tac-black pr-4 text-body">{faq.question}</span>
+                      <span class="faq-icon font-share text-2xl text-tac-orange shrink-0 leading-none select-none transition-transform">+</span>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-5">
+                      <p class="font-mulish text-body text-tac-black leading-relaxed">{faq.answer}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+
+          <div class="mt-16 text-center">
+            <p class="font-mulish text-body text-gray-600 mb-6">Vous n'avez pas trouve la reponse a votre question ?</p>
+            <a href="/contact/" class="btn-orange">Contactez-nous</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Schema.org FAQPage -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": allFaqItems.map(item => ({
+      "@type": "Question",
+      "name": item.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": item.answer
+      }
+    }))
+  })} />
+
+</Layout>
+
+<script>
+  // FAQ accordion toggle with data-faq attribute
+  document.querySelectorAll('[data-faq] .faq-toggle').forEach(button => {
+    button.addEventListener('click', () => {
+      const parent = button.closest('[data-faq]');
+      const content = parent.querySelector('.faq-content');
+      const icon = button.querySelector('.faq-icon');
+      const isOpen = !content.classList.contains('hidden');
+
+      // Close all others
+      document.querySelectorAll('[data-faq]').forEach(item => {
+        item.querySelector('.faq-content').classList.add('hidden');
+        item.querySelector('.faq-icon').textContent = '+';
+        item.querySelector('.faq-toggle').setAttribute('aria-expanded', 'false');
+      });
+
+      if (!isOpen) {
+        content.classList.remove('hidden');
+        icon.textContent = '\u2212';
+        button.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+</script>

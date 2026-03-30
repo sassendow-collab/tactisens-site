@@ -1,0 +1,275 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const steps = [
+  {
+    number: "01",
+    title: "Choisissez votre formule",
+    description: "Selectionnez le nombre de participants et la mission de votre choix.",
+  },
+  {
+    number: "02",
+    title: "Personnalisez votre message",
+    description: "Ajoutez un mot personnel pour accompagner votre bon cadeau.",
+  },
+  {
+    number: "03",
+    title: "Offrez l'experience",
+    description: "Recevez le bon par email ou imprimez-le pour une remise en main propre.",
+  },
+];
+
+const keyPoints = [
+  "Bon cadeau valable 1 an",
+  "Pour 1 ou plusieurs personnes",
+  "Utilisable sur toutes les missions",
+  "Envoi par email ou impression",
+];
+
+const occasions = [
+  {
+    title: "Anniversaire",
+    description: "Offrez une experience hors du commun pour feter un anniversaire entre amis ou en famille.",
+  },
+  {
+    title: "Noel / Nouvel An",
+    description: "Le cadeau original qui change des classiques. Parfait sous le sapin ou pour lancer la nouvelle annee.",
+  },
+  {
+    title: "Cadeau de depart",
+    description: "Marquez le coup pour un collegue, un ami ou un proche qui s'en va avec un souvenir memorable.",
+  },
+  {
+    title: "Fete de diplome",
+    description: "Celebrez la reussite avec un defi collectif. Ideal pour un groupe de jeunes diplomes.",
+  },
+  {
+    title: "EVJF / EVG",
+    description: "Une activite originale pour enterrer la vie de celibataire entre rires et sensations fortes.",
+  },
+  {
+    title: "Anniversaire de mariage",
+    description: "Partagez un moment complice a deux ou avec vos proches pour feter votre histoire.",
+  },
+];
+---
+
+<Layout title="Carte Cadeau | Tactisens Escape Game Toulouse" description="Offrez un escape game a Toulouse. Bon cadeau a partir de 20 euros, valable 1 an, utilisable sur toutes nos missions. L'idee cadeau originale.">
+
+  <!-- ==================== SECTION 1 : HERO BANNER ==================== -->
+  <section class="relative min-h-[600px] lg:min-h-[90vh] flex flex-col">
+    <img
+      src="/images/activite-insolite-toulouse-cadeau.webp"
+      alt="Carte cadeau Escape Game Toulouse Tactisens"
+      class="absolute inset-0 w-full h-full object-cover"
+    />
+    <div class="absolute inset-0 bg-black/30"></div>
+    <div class="relative z-10 flex-1 flex flex-col justify-center section-content pt-[186px] pb-5">
+      <div class="pb-[8vw]">
+        <!-- Spiral icon centered -->
+        <div class="flex justify-center mb-[50px]">
+          <img
+            src="/images/escape-game-toulouse-tactisens-31-bis.webp"
+            alt="Escape Game sensoriel Toulouse"
+            class="w-16 h-[60px] object-contain"
+          />
+        </div>
+
+        <!-- H1 -->
+        <h1 class="font-share text-bigger text-center uppercase tracking-[3px] leading-[1.2] font-normal text-[#b6b3b3] mb-5">
+          Offrez une experience inoubliable
+        </h1>
+
+        <!-- H2 -->
+        <h2 class="font-share text-[2.5rem] lg:text-gigantic text-center text-tac-white font-bold leading-none tracking-[-3px] mb-5">
+          Carte Cadeau Tactisens
+        </h2>
+
+        <p class="font-share text-bigger text-center text-tac-orange font-bold">A partir de 20&#8364;</p>
+
+        <!-- CTA -->
+        <div class="flex justify-center mt-[50px]">
+          <a
+            href="https://www.tactisens.com/bon-cadeau/"
+            class="btn-outline-white font-share text-[19px] uppercase tracking-[2px] px-[38px] py-5"
+            target="_blank"
+            rel="noopener"
+          >
+            Commander un bon cadeau
+          </a>
+        </div>
+      </div>
+
+      <!-- Breadcrumb -->
+      <nav class="text-sm text-white/60 text-center mt-4" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-white no-underline text-white/60">Accueil</a>
+        <span class="mx-2">/</span>
+        <span class="text-white/80">Carte cadeau</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 2 : GIFT CARD INTRO ==================== -->
+  <section class="bg-tac-dark-blue py-16 lg:py-24">
+    <div class="section-content">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+        <!-- Text -->
+        <div>
+          <!-- Spiral + heading -->
+          <div class="flex items-start gap-0 mb-8">
+            <img
+              src="/images/escape-game-toulouse-tactisens-31.webp"
+              alt="Escape Game Toulouse icone"
+              class="w-[49px] h-[50px] shrink-0"
+            />
+            <h2 class="pl-5 font-share text-[2.5rem] lg:text-colossal text-tac-white uppercase leading-tight font-bold tracking-[-2px]">
+              Le cadeau ideal pour les amateurs de sensations
+            </h2>
+          </div>
+          <hr class="separator-orange w-16 mt-4 mb-6" />
+          <p class="font-mulish text-tac-white/80 text-big leading-relaxed mb-8">
+            Offrez une experience unique a vos proches. Avec le bon cadeau Tactisens, le destinataire choisit la date, la mission et vit un moment inoubliable entre amis ou en famille. A partir de 20&#8364;.
+          </p>
+
+          <!-- Key points -->
+          <ul class="space-y-3 mb-10">
+            {keyPoints.map((point) => (
+              <li class="flex items-start gap-3 font-mulish text-tac-white text-body">
+                <span class="text-tac-orange text-xl leading-none mt-0.5">&#10003;</span>
+                <span>{point}</span>
+              </li>
+            ))}
+          </ul>
+
+          <!-- CTA -->
+          <a href="https://www.tactisens.com/bon-cadeau/" class="btn-orange" target="_blank" rel="noopener">
+            Commander un bon cadeau
+          </a>
+        </div>
+
+        <!-- Image -->
+        <div class="relative">
+          <img
+            src="/images/escape-game-toulouse-tactisens-01.webp"
+            alt="Escape Game Toulouse Tactisens"
+            class="w-full rounded-xl shadow-2xl"
+            loading="lazy"
+          />
+          <div class="absolute inset-0 rounded-xl ring-2 ring-tac-orange/30 ring-inset"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 3 : POURQUOI OFFRIR ==================== -->
+  <section class="bg-tac-light-gray text-black py-16 lg:py-24">
+    <div class="section-content text-center">
+      <!-- Spiral + heading centered -->
+      <div class="flex justify-center mb-4">
+        <img
+          src="/images/escape-game-toulouse-tactisens-31.webp"
+          alt="Escape Game Toulouse icone"
+          class="w-[49px] h-[50px] shrink-0"
+        />
+      </div>
+      <h2 class="font-share text-[2.5rem] lg:text-colossal text-tac-dark-blue uppercase mb-4 font-bold tracking-[-2px]">
+        Pourquoi offrir une carte-cadeau Tactisens ?
+      </h2>
+      <hr class="separator-orange w-20 mx-auto mb-12" />
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto">
+        <div>
+          <div class="text-tac-orange text-4xl mb-3">&#9829;</div>
+          <h3 class="font-share font-bold text-base text-tac-dark-blue uppercase mb-2">Moment de qualite</h3>
+          <p class="font-mulish text-gray-600 text-sm">Du temps partage avec les personnes qui comptent, loin des ecrans.</p>
+        </div>
+        <div>
+          <div class="text-tac-orange text-4xl mb-3">&#9733;</div>
+          <h3 class="font-share font-bold text-base text-tac-dark-blue uppercase mb-2">Experience partagee</h3>
+          <p class="font-mulish text-gray-600 text-sm">Une aventure collective ou chacun apporte ses forces a l'equipe.</p>
+        </div>
+        <div>
+          <div class="text-tac-orange text-4xl mb-3">&#128161;</div>
+          <h3 class="font-share font-bold text-base text-tac-dark-blue uppercase mb-2">Souvenir unique</h3>
+          <p class="font-mulish text-gray-600 text-sm">Un moment memorable dont on parle encore des mois apres.</p>
+        </div>
+        <div>
+          <div class="text-tac-orange text-4xl mb-3">&#127873;</div>
+          <h3 class="font-share font-bold text-base text-tac-dark-blue uppercase mb-2">Pas un objet, un vecu</h3>
+          <p class="font-mulish text-gray-600 text-sm">Mieux qu'un cadeau materiel, une experience qui marque les esprits.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 4 : OCCASIONS ==================== -->
+  <section class="bg-white text-black py-16 lg:py-24">
+    <div class="section-content">
+      <!-- Spiral + heading centered -->
+      <div class="flex justify-center mb-4">
+        <img
+          src="/images/escape-game-toulouse-tactisens-31.webp"
+          alt="Escape Game Toulouse icone"
+          class="w-[49px] h-[50px] shrink-0"
+        />
+      </div>
+      <h2 class="font-share text-[2.5rem] lg:text-colossal text-tac-dark-blue text-center uppercase mb-4 font-bold tracking-[-2px]">
+        Pour quelle occasion ?
+      </h2>
+      <hr class="separator-orange w-20 mx-auto mb-12" />
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {occasions.map((occasion) => (
+          <div class="bg-tac-light-gray rounded-xl p-6 hover:shadow-lg transition-shadow">
+            <h3 class="font-share font-bold text-lg text-tac-dark-blue uppercase mb-2">{occasion.title}</h3>
+            <p class="font-mulish text-gray-600 text-sm">{occasion.description}</p>
+          </div>
+        ))}
+      </div>
+
+      <div class="text-center mt-12">
+        <a href="https://www.tactisens.com/bon-cadeau/" class="btn-orange" target="_blank" rel="noopener">
+          Commander un bon cadeau
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 5 : STEPS ==================== -->
+  <section class="bg-tac-black py-16 lg:py-24">
+    <div class="section-content">
+      <!-- Spiral + heading centered -->
+      <div class="flex justify-center mb-4">
+        <img
+          src="/images/escape-game-toulouse-tactisens-31.webp"
+          alt="Escape Game Toulouse icone"
+          class="w-[49px] h-[50px] shrink-0"
+        />
+      </div>
+      <h2 class="font-share text-[2.5rem] lg:text-colossal text-tac-white text-center uppercase mb-4 font-bold tracking-[-2px]">
+        Comment ca marche ?
+      </h2>
+      <hr class="separator-orange w-20 mx-auto mb-14" />
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+        {steps.map((step) => (
+          <div class="text-center">
+            <span class="font-share text-gigantic text-tac-orange/20 leading-none block">{step.number}</span>
+            <h3 class="font-share text-bigger text-tac-white uppercase mt-2 mb-3">{step.title}</h3>
+            <p class="font-mulish text-tac-white/70 text-body">{step.description}</p>
+          </div>
+        ))}
+      </div>
+
+      <!-- Bottom CTA -->
+      <div class="text-center mt-14">
+        <a href="https://www.tactisens.com/bon-cadeau/" class="btn-outline-orange" target="_blank" rel="noopener">
+          Commander un bon cadeau
+        </a>
+      </div>
+    </div>
+  </section>
+
+</Layout>

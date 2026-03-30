@@ -1,0 +1,695 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const faqItems = [
+  {
+    question: "L'Escape Game Windar Theory, qu'est-ce que c'est ?",
+    answer: "Windar Theory est un escape game immersif dans lequel votre equipe doit resoudre des enigmes en 60 minutes. Accessible des 12 ans, il met a l'epreuve votre logique, votre observation et votre esprit d'equipe dans un decor unique au coeur de Toulouse."
+  },
+  {
+    question: "L'Aventure Sensorielle, qu'est-ce que c'est ?",
+    answer: "L'Aventure Sensorielle est un escape game unique ou vos 5 sens sont mis a contribution. Accessible des 7 ans, cette experience inedite vous plonge dans un parcours ou le toucher, l'ouie, l'odorat, le gout et la vue sont vos meilleurs atouts."
+  },
+  {
+    question: "Je suis un professionnel, puis-je demander un devis avant de passer commande et reserver ?",
+    answer: "Bien sur ! Nous etablissons des devis personnalises pour les entreprises. Contactez-nous par telephone au 05 61 46 40 35 ou via notre formulaire de contact, et nous vous enverrons un devis adapte a votre groupe et vos besoins."
+  },
+  {
+    question: "Proposez-vous d'autres jeux et animations pour un team building ?",
+    answer: "Oui, en plus de nos deux escape games, nous proposons des animations complementaires : ateliers olfactifs, quizz enigmes et sens, cartographie des sens, ateliers degustation. Ces activites peuvent etre combinees pour un evenement sur mesure."
+  },
+  {
+    question: "Quelles sont les offres dediees aux entreprises ?",
+    answer: "Nous proposons trois offres principales : le team building chez Tactisens (dans nos locaux), le team building itinerant (dans vos locaux), et les offres CE/CSE avec tarifs preferentiels. Chaque formule est personnalisable selon vos besoins."
+  },
+  {
+    question: "Comment organiser un Team Building ?",
+    answer: "C'est simple ! Contactez-nous pour definir ensemble le format ideal : nombre de participants, date, duree, animations souhaitees. Nous nous occupons de toute l'organisation et vous envoyons un devis personnalise."
+  },
+  {
+    question: "Combien de personnes peuvent jouer par equipe ?",
+    answer: "Chaque equipe peut compter de 3 a 6 joueurs pour nos escape games. Pour les grands groupes, nous formons plusieurs equipes qui jouent en parallele, avec un classement entre equipes pour stimuler la competition."
+  },
+  {
+    question: "Si nous sommes un grand groupe, est-il possible de jouer a plusieurs equipes ?",
+    answer: "Absolument ! Nous pouvons accueillir jusqu'a 72 participants en simultane grace a nos deux parcours et notre systeme de rotation. Les equipes jouent en parallele et un classement final ajoute une dimension competitive a l'experience."
+  }
+];
+
+const complementaryOffers = [
+  {
+    title: "Privatisation des lieux",
+    image: "/images/evenement-entreprise-toulouse-centre-escape.webp",
+    text: "Profitez de l'ensemble de nos espaces pour votre evenement prive.",
+    checklist: [
+      "340 m\u00B2 de surface totale",
+      "Accueil reception de 80 m\u00B2",
+      "Salle de reunion de 60 m\u00B2",
+      "A partir de 2h ou a la journee"
+    ]
+  },
+  {
+    title: "Petit dejeuner / Boissons / Cocktails dejeunatoires et dinatoires",
+    image: "/images/Design-sans-titre.webp",
+    text: "Nous proposons des formules conviviales pour accompagner votre evenement : petit dejeuner d'equipe, pauses cafe, cocktails dejeunatoires ou dinatoires. Des moments de partage pour prolonger l'experience dans une ambiance chaleureuse.",
+    checklist: []
+  },
+  {
+    title: "Team building PLUS",
+    image: "/images/activite-cohesion-entreprise-toulouse.webp",
+    text: "Allez plus loin avec notre formule Team building PLUS.",
+    checklist: [
+      "Debriefing approfondi",
+      "Ateliers personnalises",
+      "Suivi regie Game Masters",
+      "Salle de reunion 60 m\u00B2"
+    ]
+  },
+  {
+    title: "Activites complementaires",
+    image: "/images/team-building-insolite-toulouse-centre.webp",
+    text: "Enrichissez votre evenement avec nos animations exclusives.",
+    checklist: [
+      "Atelier olfactif",
+      "Animation Quizz Enigmes & Sens",
+      "Cartographie des sens",
+      "Atelier degustation"
+    ]
+  },
+  {
+    title: "Comites d'entreprise, collectivites et associations",
+    image: "/images/cohesion-salarie-activite-toulouse.webp",
+    text: "Nous etablissons des partenariats avec les CE/CSE, collectivites et associations. Beneficiez d'un code de reduction exclusif pour vos collaborateurs et proposez une activite originale dans votre catalogue d'avantages.",
+    checklist: []
+  }
+];
+---
+
+<Layout title="Team Building Escape Game Toulouse | Tactisens - Entreprises" description="Team building escape game a Toulouse. Jusqu'a 72 participants, 340m2 privatisables. Team building chez Tactisens ou dans vos locaux. Devis gratuit.">
+
+  <!-- ==================== SECTION 1 : HERO ==================== -->
+  <section class="relative min-h-[600px] lg:min-h-[90vh] flex flex-col">
+    <img
+      src="/images/escape-game-toulouse-tactisens-09.webp"
+      alt="Team building escape game Toulouse Tactisens"
+      class="absolute inset-0 w-full h-full object-cover"
+    />
+    <div class="absolute inset-0 bg-black/30"></div>
+    <div class="relative z-10 flex-1 flex flex-col justify-center section-content pt-[186px] pb-5">
+      <div class="pb-[8vw]">
+        <!-- Spiral icon centered -->
+        <div class="flex justify-center mb-[50px]">
+          <img
+            src="/images/escape-game-toulouse-tactisens-31-bis.webp"
+            alt="Escape Game Toulouse Tactisens"
+            class="w-16 h-[60px] object-contain"
+          />
+        </div>
+
+        <!-- H1 -->
+        <h1 class="font-share text-bigger text-center uppercase tracking-[3px] leading-[1.2] font-normal text-[#b6b3b3] mb-5">
+          Team building Toulouse
+        </h1>
+
+        <!-- H2 -->
+        <h2 class="font-share text-[2.5rem] lg:text-gigantic text-center text-tac-white font-bold leading-none tracking-[-3px] mb-[70px]">
+          Le team booster des entreprises !
+        </h2>
+
+        <!-- CTA -->
+        <div class="flex justify-center">
+          <a
+            href="/reservation/"
+            class="btn-outline-white font-share text-[19px] uppercase tracking-[2px] px-[38px] py-5"
+          >
+            Reservez votre aventure !
+          </a>
+        </div>
+      </div>
+
+      <!-- Breadcrumb -->
+      <nav class="text-sm text-white/60 text-center mt-4" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-white no-underline text-white/60">Accueil</a>
+        <span class="mx-2">/</span>
+        <a href="/evenement/" class="hover:text-white no-underline text-white/60">Evenements</a>
+        <span class="mx-2">/</span>
+        <span class="text-white/80">Entreprises</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 2 : TACTISENS POUR VOS EVENEMENTS ==================== -->
+  <section class="relative py-[120px]">
+    <img
+      src="/images/escape-game-toulouse-tactisens-09.webp"
+      alt="Escape Game Toulouse evenements entreprise"
+      class="absolute inset-0 w-full h-full object-cover"
+    />
+    <div class="absolute inset-0 bg-black/70"></div>
+    <div class="relative z-10 section-content text-center">
+      <div class="flex items-start gap-0 justify-center mb-8">
+        <img
+          src="/images/escape-game-toulouse-tactisens-31.webp"
+          alt=""
+          class="w-[49px] h-[50px] shrink-0"
+        />
+        <h2 class="pl-5 font-share text-[2.5rem] lg:text-colossal font-bold tracking-[-2px] leading-none">
+          <span class="text-tac-white">Tactisens pour</span><br>
+          <span class="text-tac-orange">vos evenements</span>
+        </h2>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 3 : THREE OFFERS CARDS ==================== -->
+  <section class="bg-tac-black py-20 lg:py-28">
+    <div class="section-content">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        <!-- Card 1 -->
+        <div class="group">
+          <div class="overflow-hidden mb-6">
+            <img
+              src="/images/team-building-original-escape-game.webp"
+              alt="Team building chez Tactisens"
+              class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500"
+              loading="lazy"
+            />
+          </div>
+          <h3 class="font-share text-large font-bold text-tac-white mb-4">Team building chez Tactisens</h3>
+          <p class="font-mulish text-body text-tac-white/80 leading-relaxed mb-5">
+            Vous cherchez une activite originale pour votre team building a Toulouse ? Oubliez les animations classiques et misez sur l'experience immersive de notre escape game ! En journee ou en soiree, offrez a votre equipe un moment unique pour renforcer la cohesion et creer des souvenirs memorables.
+          </p>
+          <a href="/evenement/entreprises/escape-game/" class="font-share text-tac-orange uppercase tracking-[2px] text-body hover:underline">decouvrir l'offre</a>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="group">
+          <div class="overflow-hidden mb-6">
+            <img
+              src="/images/team-building-activite-toulouse-centre.webp"
+              alt="Team building dans vos locaux"
+              class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500"
+              loading="lazy"
+            />
+          </div>
+          <h3 class="font-share text-large font-bold text-tac-white mb-4">Team building dans vos locaux</h3>
+          <p class="font-mulish text-body text-tac-white/80 leading-relaxed mb-5">
+            Avec notre expertise en animation, nous accueillons des groupes de toutes tailles et nous adaptons a vos besoins. Que ce soit dans vos locaux ou dans un espace dedie, nous nous deplacons autour de Toulouse pour organiser votre team building sur mesure avec des installations adaptees.
+          </p>
+          <a href="/evenement/entreprises/team-building" class="font-share text-tac-orange uppercase tracking-[2px] text-body hover:underline">decouvrir l'offre</a>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="group">
+          <div class="overflow-hidden mb-6">
+            <img
+              src="/images/cohesion-equipe-toulouse-escape-game.webp"
+              alt="Comites d'entreprise CE CSE"
+              class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500"
+              loading="lazy"
+            />
+          </div>
+          <h3 class="font-share text-large font-bold text-tac-white mb-4">Comites d'entreprise (CE/CSE)</h3>
+          <p class="font-mulish text-body text-tac-white/80 leading-relaxed mb-5">
+            Ajoutez une touche ludique et collaborative a votre catalogue CE/CSE en proposant une experience captivante a tous vos collaborateurs. Nos deux escape games sont concus pour renforcer l'intelligence collective et l'esprit d'equipe, que ce soit entre collegues, en famille ou entre amis.
+          </p>
+          <a href="/escape-game-ce-cse/" class="font-share text-tac-orange uppercase tracking-[2px] text-body hover:underline">decouvrir l'offre</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 4 : TEAM BUILDING ESCAPE GAME ==================== -->
+  <section class="relative py-[120px]">
+    <img
+      src="/images/escape-game-toulouse-tactisens-09.webp"
+      alt="Team building escape game Toulouse"
+      class="absolute inset-0 w-full h-full object-cover"
+    />
+    <div class="absolute inset-0 bg-black/70"></div>
+    <div class="relative z-10 section-content">
+
+      <!-- Heading -->
+      <div class="flex items-start gap-0 mb-8">
+        <img
+          src="/images/escape-game-toulouse-tactisens-31.webp"
+          alt=""
+          class="w-[49px] h-[50px] shrink-0"
+        />
+        <h2 class="pl-5 font-share text-[2.5rem] lg:text-colossal font-bold tracking-[-2px] leading-none">
+          <span class="text-tac-white">Team Building Escape Game Toulouse :</span><br>
+          <span class="text-tac-orange">Le team booster des entreprises !</span>
+        </h2>
+      </div>
+
+      <!-- Subtitle -->
+      <h5 class="font-share text-bigger uppercase text-tac-orange mb-6">Un Team building d'entreprise unique a Toulouse</h5>
+
+      <!-- Body text -->
+      <div class="max-w-4xl">
+        <p class="font-mulish text-big font-semibold leading-[1.6] mb-5">
+          Tactisens vous propose deux parcours d'escape game immersifs, concus pour stimuler la cohesion d'equipe et offrir une activite originale a vos collaborateurs. Que vous soyez une PME ou un grand groupe, notre concept unique place les sens au coeur de l'experience pour un team building memorable.
+        </p>
+
+        <!-- Nos atouts -->
+        <p class="font-share text-bigger uppercase text-tac-white mb-5 mt-10">Nos atouts</p>
+
+        <div class="space-y-4">
+          <p class="font-mulish text-body font-semibold leading-[1.4] pl-[35px] relative">
+            <img src="/images/true.svg" alt="" class="w-3 inline-block absolute left-0 top-1" />
+            Capacite d'accueil de grands groupes : jusqu'a 72 participants
+          </p>
+          <p class="font-mulish text-body font-semibold leading-[1.4] pl-[35px] relative">
+            <img src="/images/true.svg" alt="" class="w-3 inline-block absolute left-0 top-1" />
+            Salle de Reception / Reunion modulable de 60 m²
+          </p>
+          <p class="font-mulish text-body font-semibold leading-[1.4] pl-[35px] relative">
+            <img src="/images/true.svg" alt="" class="w-3 inline-block absolute left-0 top-1" />
+            Idealement situe dans le centre de Toulouse
+          </p>
+          <p class="font-mulish text-body font-semibold leading-[1.4] pl-[35px] relative">
+            <img src="/images/true.svg" alt="" class="w-3 inline-block absolute left-0 top-1" />
+            Nombreuses solutions de stationnement a proximite
+          </p>
+          <p class="font-mulish text-body font-semibold leading-[1.4] pl-[35px] relative">
+            <img src="/images/true.svg" alt="" class="w-3 inline-block absolute left-0 top-1" />
+            Acces en transports en commun optimal (metros, bus...)
+          </p>
+          <p class="font-mulish text-body font-semibold leading-[1.4] pl-[35px] relative">
+            <img src="/images/true.svg" alt="" class="w-3 inline-block absolute left-0 top-1" />
+            Photo souvenir tres originale offerte
+          </p>
+        </div>
+      </div>
+
+      <!-- Big CTA -->
+      <div class="flex justify-center mt-[60px]">
+        <a
+          href="/contact/"
+          class="btn-orange font-share text-[1rem] lg:text-[1.2rem] uppercase tracking-[2px] px-8 lg:px-[63px] py-[19px] text-center leading-snug"
+        >
+          Contactez-nous pour un devis personnalise pour votre activite de team building !
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 5 : ORGANISER UN TEAM BUILDING REUSSI ==================== -->
+  <section class="bg-tac-white py-[120px]">
+    <div class="section-content">
+      <div class="flex flex-col lg:flex-row items-center gap-10">
+
+        <!-- Left: image -->
+        <div class="lg:w-[48%]">
+          <img
+            src="/images/sortie-scolaire-toulouse-insolite-ludique.webp"
+            alt="Organiser un team building entreprise reussi Toulouse"
+            class="w-full aspect-[4/3] object-cover"
+            loading="lazy"
+          />
+        </div>
+
+        <!-- Right: content -->
+        <div class="lg:flex-1">
+          <!-- Spiral + heading -->
+          <div class="flex items-start gap-0 mb-8">
+            <img
+              src="/images/escape-game-toulouse-tactisens-31.webp"
+              alt=""
+              class="w-[49px] h-[50px] shrink-0"
+            />
+            <h2 class="pl-5 font-share text-[2rem] lg:text-colossal font-bold tracking-[-2px] leading-none text-tac-black">
+              Organiser un Team Building entreprise reussi
+            </h2>
+          </div>
+
+          <h5 class="font-share text-bigger uppercase text-tac-orange mb-6">Stimuler la cohesion d'equipe</h5>
+
+          <p class="font-mulish text-big font-semibold leading-[1.6] text-tac-black mb-5">
+            Organiser un team building reussi, c'est offrir a vos equipes un moment unique, en journee ou en soiree, pour sortir du cadre habituel et vivre ensemble une experience forte. Chez Tactisens, nous creons des moments de convivialite qui renforcent les liens entre collaborateurs.
+          </p>
+          <p class="font-mulish text-big font-semibold leading-[1.6] text-tac-black mb-8">
+            Notre approche sensorielle stimule la creativite et l'esprit de competition dans une ambiance bienveillante. Chaque session est pensee pour que tous les participants, quel que soit leur profil, contribuent a la reussite collective.
+          </p>
+
+          <a href="/contact/" class="btn-outline-orange font-share text-[1.1rem] uppercase tracking-[2px] px-[38px] py-[17px]">
+            Demandez un devis
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 6 : ESCAPE GAME TACTISENS EN QUELQUES MOTS ==================== -->
+  <section class="bg-tac-black py-[120px]">
+    <div class="section-content">
+      <div class="flex flex-col lg:flex-row items-center gap-10">
+
+        <!-- Left: video placeholder -->
+        <div class="lg:w-[48%]">
+          <div class="w-full aspect-video bg-black border border-white/10 flex items-center justify-center">
+            <span class="text-white/30 font-share text-bigger">Video</span>
+          </div>
+        </div>
+
+        <!-- Right: spiral + heading -->
+        <div class="lg:flex-1 lg:pl-10">
+          <div class="flex items-start gap-0">
+            <img
+              src="/images/escape-game-toulouse-tactisens-31.webp"
+              alt=""
+              class="w-[49px] h-[50px] shrink-0"
+            />
+            <h2 class="pl-5 font-share text-colossal font-bold tracking-[-2px] leading-none">
+              <span class="text-tac-white">Escape Game Toulouse</span><br>
+              <span class="text-tac-white">Tactisens en quelques mots</span>
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 7 : TEAM BUILDING EN ENTREPRISE ==================== -->
+  <section class="bg-tac-white py-[120px]">
+    <div class="section-content">
+
+      <!-- Spiral + heading -->
+      <div class="flex items-start gap-0 mb-8">
+        <img
+          src="/images/escape-game-toulouse-tactisens-31.webp"
+          alt=""
+          class="w-[49px] h-[50px] shrink-0"
+        />
+        <h2 class="pl-5 font-share text-[2rem] lg:text-colossal font-bold tracking-[-2px] leading-none text-tac-black">
+          Team Building en entreprise
+        </h2>
+      </div>
+
+      <h5 class="font-share text-bigger uppercase text-tac-orange mb-10">Un team building itinerant sur mesure</h5>
+
+      <div class="flex flex-col lg:flex-row items-center gap-10">
+
+        <!-- Left: text -->
+        <div class="lg:w-[55%]">
+          <p class="font-mulish text-big font-semibold leading-[1.6] text-tac-black mb-5">
+            Vous souhaitez organiser un team building innovant directement dans vos locaux ? Tactisens se deplace autour de Toulouse pour installer une experience immersive sur mesure, adaptee a votre espace et a vos objectifs.
+          </p>
+          <p class="font-mulish text-big font-semibold leading-[1.6] text-tac-black mb-5">
+            Notre logistique flexible nous permet de nous adapter a tous les environnements : salles de reunion, espaces de coworking, lieux evenementiels. Nous apportons tout le materiel necessaire pour transformer votre lieu en terrain de jeu collaboratif.
+          </p>
+          <p class="font-mulish text-big font-semibold leading-[1.6] text-tac-black">
+            Une solution ideale pour les entreprises qui souhaitent offrir une activite originale sans mobiliser leurs equipes a l'exterieur.
+          </p>
+        </div>
+
+        <!-- Right: image -->
+        <div class="lg:w-[45%]">
+          <img
+            src="/images/escape-game-toulouse-entreprises.webp"
+            alt="Team building en entreprise Toulouse"
+            class="w-full aspect-[4/3] object-cover"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 8 : OFFRES COMPLEMENTAIRES ==================== -->
+  <section class="bg-tac-dark-blue py-[120px]">
+    <div class="section-content">
+
+      <!-- Spiral + heading -->
+      <div class="flex items-start gap-0 mb-8 justify-center">
+        <img
+          src="/images/escape-game-toulouse-tactisens-31.webp"
+          alt=""
+          class="w-[49px] h-[50px] shrink-0"
+        />
+        <h2 class="pl-5 font-share text-[2rem] lg:text-colossal font-bold tracking-[-2px] leading-none text-center">
+          <span class="text-tac-white">Nos offres complementaires</span><br>
+          <span class="text-tac-orange">pour les evenements d'entreprise</span>
+        </h2>
+      </div>
+
+      <p class="font-mulish text-big font-semibold leading-[1.6] text-center max-w-3xl mx-auto mb-16">
+        Completez votre experience avec nos services additionnels pour un evenement d'entreprise cle en main.
+      </p>
+
+      <!-- Cards -->
+      <div class="space-y-8">
+        {complementaryOffers.map((offer) => (
+          <div class="border border-tac-orange/30 flex flex-col lg:flex-row overflow-hidden">
+            <!-- Image -->
+            <div class="lg:w-[35%] shrink-0">
+              <img
+                src={offer.image}
+                alt={offer.title}
+                class="w-full h-full object-cover aspect-[4/3] lg:aspect-auto"
+                loading="lazy"
+              />
+            </div>
+            <!-- Content -->
+            <div class="p-8 lg:p-10 flex flex-col justify-center">
+              <h3 class="font-share text-large font-bold text-tac-white mb-4">{offer.title}</h3>
+              <p class="font-mulish text-body text-tac-white/80 leading-relaxed mb-4">{offer.text}</p>
+              {offer.checklist.length > 0 && (
+                <div class="space-y-3 mt-2">
+                  {offer.checklist.map((item) => (
+                    <p class="font-mulish text-body font-semibold leading-[1.4] pl-[35px] relative">
+                      <img src="/images/true.svg" alt="" class="w-3 inline-block absolute left-0 top-1" />
+                      {item}
+                    </p>
+                  ))}
+                </div>
+              )}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 9 : OFFREZ UN CADEAU ORIGINAL ==================== -->
+  <section class="bg-tac-white py-[120px]">
+    <div class="section-content">
+      <div class="flex flex-col lg:flex-row items-center gap-10">
+
+        <!-- Left: gift card image -->
+        <div class="lg:w-[48%]">
+          <img
+            src="/images/escape-game-toulouse-entreprises.webp"
+            alt="Carte cadeau escape game Toulouse entreprise"
+            class="w-full aspect-[4/3] object-cover"
+            loading="lazy"
+          />
+        </div>
+
+        <!-- Right: text -->
+        <div class="lg:flex-1">
+          <h5 class="font-share text-bigger uppercase text-tac-orange mb-6">OFFREZ UN CADEAU ORIGINAL !</h5>
+          <p class="font-mulish text-big font-semibold leading-[1.6] text-tac-black mb-5">
+            Vous cherchez un cadeau original pour vos collaborateurs ? Offrez-leur une experience immersive et ludique chez Tactisens ! Nos cartes cadeaux sont une idee innovante pour surprendre et faire plaisir, que ce soit pour une occasion speciale ou simplement pour remercier votre equipe.
+          </p>
+          <p class="font-mulish text-big font-semibold leading-[1.6] text-tac-black mb-8">
+            Une activite ludique et immersive a partager entre collegues, en famille ou entre amis. Le cadeau ideal pour creer des souvenirs uniques.
+          </p>
+          <a href="/carte-cadeau/" class="btn-orange font-share text-[1.1rem] uppercase tracking-[2px] px-[38px] py-[17px]">
+            Offrir un bon cadeau
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 10 : AVIS CLIENTS ==================== -->
+  <section class="relative py-[120px]">
+    <img
+      src="/images/escape-game-toulouse-tactisens-09.webp"
+      alt="Avis clients escape game Toulouse"
+      class="absolute inset-0 w-full h-full object-cover"
+    />
+    <div class="absolute inset-0 bg-black/70"></div>
+    <div class="relative z-10 section-content">
+
+      <!-- Spiral + heading -->
+      <div class="flex items-start gap-0 justify-center mb-16">
+        <img
+          src="/images/escape-game-toulouse-tactisens-31.webp"
+          alt=""
+          class="w-[49px] h-[50px] shrink-0"
+        />
+        <h2 class="pl-5 font-share text-[2rem] lg:text-colossal font-bold tracking-[-2px] leading-none text-tac-white">
+          Avis clients
+        </h2>
+      </div>
+
+      <!-- Testimonials -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-tac-quote-back p-8 border-l-4 border-tac-orange">
+          <p class="font-mulish text-body text-tac-white leading-relaxed italic mb-4">
+            "Nous avons organise notre team building chez Tactisens avec 40 collaborateurs. L'experience etait incroyable, tout le monde en parle encore ! L'equipe est tres professionnelle et s'est parfaitement adaptee a notre groupe."
+          </p>
+          <p class="font-share text-tac-orange font-bold">Marie D.</p>
+        </div>
+        <div class="bg-tac-quote-back p-8 border-l-4 border-tac-orange">
+          <p class="font-mulish text-body text-tac-white leading-relaxed italic mb-4">
+            "Une activite de team building vraiment originale ! Nos equipes ont adore le concept sensoriel. Le debriefing collectif a permis de renforcer les liens entre collegues de differents services. Je recommande vivement."
+          </p>
+          <p class="font-share text-tac-orange font-bold">Thomas R.</p>
+        </div>
+        <div class="bg-tac-quote-back p-8 border-l-4 border-tac-orange">
+          <p class="font-mulish text-body text-tac-white leading-relaxed italic mb-4">
+            "Super experience pour notre seminaire d'entreprise. La privatisation des lieux et le cocktail dinatoire ont rendu la soiree parfaite. Merci a toute l'equipe Tactisens pour leur accueil et leur flexibilite."
+          </p>
+          <p class="font-share text-tac-orange font-bold">Sophie L.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 11 : ILS NOUS ONT FAIT CONFIANCE ==================== -->
+  <section class="bg-tac-black py-[100px]">
+    <div class="section-content text-center">
+      <h2 class="font-share text-[2rem] lg:text-colossal font-bold tracking-[-2px] leading-none text-tac-white mb-16">
+        Ils nous ont fait confiance
+      </h2>
+
+      <!-- Logos grid -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center max-w-4xl mx-auto">
+        <img
+          src="/images/escape-game-grand-groupe-toulouse-1.webp"
+          alt="Entreprises partenaires Tactisens"
+          class="w-full max-w-[200px] object-contain opacity-80 hover:opacity-100 transition-opacity"
+          loading="lazy"
+        />
+        <img
+          src="/images/escape-game-evenement-entreprise-toulouse.webp"
+          alt="Entreprises partenaires Tactisens"
+          class="w-full max-w-[200px] object-contain opacity-80 hover:opacity-100 transition-opacity"
+          loading="lazy"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 12 : CONTACT FORM ==================== -->
+  <section class="bg-tac-black py-[120px]">
+    <div class="section-content max-w-3xl mx-auto">
+      <h2 class="font-share text-[2rem] lg:text-colossal font-bold tracking-[-2px] leading-none text-tac-white text-center mb-8">
+        Faites plaisir a vos collaborateurs !
+      </h2>
+
+      <p class="font-mulish text-big font-semibold leading-[1.6] text-center mb-4">
+        Vous avez des questions ? Consultez notre <a href="/faq/" class="text-tac-orange hover:underline">FAQ</a>.
+      </p>
+      <p class="font-mulish text-big font-semibold leading-[1.6] text-center mb-12">
+        Ou appelez-nous au <a href="tel:0561464035" class="text-tac-orange hover:underline whitespace-nowrap">05 61 46 40 35</a>
+      </p>
+
+      <form action="/contact/" method="POST" class="space-y-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <label for="nom" class="font-share text-body text-tac-white mb-2 block">Nom</label>
+            <input type="text" id="nom" name="nom" required class="w-full bg-transparent border border-white/30 text-tac-white font-mulish text-body px-4 py-3 focus:border-tac-orange focus:outline-none transition-colors" />
+          </div>
+          <div>
+            <label for="prenom" class="font-share text-body text-tac-white mb-2 block">Prenom</label>
+            <input type="text" id="prenom" name="prenom" required class="w-full bg-transparent border border-white/30 text-tac-white font-mulish text-body px-4 py-3 focus:border-tac-orange focus:outline-none transition-colors" />
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <label for="telephone" class="font-share text-body text-tac-white mb-2 block">Telephone</label>
+            <input type="tel" id="telephone" name="telephone" class="w-full bg-transparent border border-white/30 text-tac-white font-mulish text-body px-4 py-3 focus:border-tac-orange focus:outline-none transition-colors" />
+          </div>
+          <div>
+            <label for="email" class="font-share text-body text-tac-white mb-2 block">Email</label>
+            <input type="email" id="email" name="email" required class="w-full bg-transparent border border-white/30 text-tac-white font-mulish text-body px-4 py-3 focus:border-tac-orange focus:outline-none transition-colors" />
+          </div>
+        </div>
+        <div>
+          <label for="societe" class="font-share text-body text-tac-white mb-2 block">Societe</label>
+          <input type="text" id="societe" name="societe" class="w-full bg-transparent border border-white/30 text-tac-white font-mulish text-body px-4 py-3 focus:border-tac-orange focus:outline-none transition-colors" />
+        </div>
+        <div>
+          <label for="adresse" class="font-share text-body text-tac-white mb-2 block">Adresse de facturation</label>
+          <input type="text" id="adresse" name="adresse" class="w-full bg-transparent border border-white/30 text-tac-white font-mulish text-body px-4 py-3 focus:border-tac-orange focus:outline-none transition-colors" />
+        </div>
+        <div>
+          <label for="message" class="font-share text-body text-tac-white mb-2 block">Message</label>
+          <textarea id="message" name="message" rows="5" class="w-full bg-transparent border border-white/30 text-tac-white font-mulish text-body px-4 py-3 focus:border-tac-orange focus:outline-none transition-colors resize-vertical"></textarea>
+        </div>
+
+        <div class="flex justify-center pt-4">
+          <button type="submit" class="btn-orange font-share text-[1.2rem] uppercase tracking-[2px] px-[63px] py-[19px]">
+            Envoyer
+          </button>
+        </div>
+
+        <p class="font-mulish text-xs text-white/40 text-center mt-4">
+          En soumettant ce formulaire, vous acceptez que vos donnees soient traitees conformement a notre politique de confidentialite (RGPD). Vos informations ne seront utilisees que pour repondre a votre demande.
+        </p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 13 : FAQ ==================== -->
+  <section class="bg-tac-light-gray py-[120px]" itemscope itemtype="https://schema.org/FAQPage">
+    <div class="section-content max-w-4xl mx-auto">
+
+      <!-- Spiral + heading -->
+      <div class="flex items-start gap-0 mb-12">
+        <img
+          src="/images/escape-game-toulouse-tactisens-31.webp"
+          alt=""
+          class="w-[49px] h-[50px] shrink-0"
+        />
+        <h2 class="pl-5 font-share text-[2rem] lg:text-colossal font-bold tracking-[-2px] leading-none text-tac-black">
+          Les questions frequentes sur notre escape game a Toulouse
+        </h2>
+      </div>
+
+      <!-- FAQ items -->
+      <div class="space-y-0">
+        {faqItems.map((item) => (
+          <div class="faq-item border-b border-black/10" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" data-faq>
+            <button class="faq-toggle w-full flex items-center justify-between py-5 text-left cursor-pointer" aria-expanded="false">
+              <h5 class="font-share text-bigger font-bold text-tac-black pr-4" itemprop="name">{item.question}</h5>
+              <span class="faq-icon font-share text-2xl text-tac-orange shrink-0 transition-transform">+</span>
+            </button>
+            <div class="faq-content hidden pb-5" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <p class="font-mulish text-body text-tac-black leading-relaxed" itemprop="text">{item.answer}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<script>
+  // FAQ accordion toggle with data-faq attribute
+  document.querySelectorAll('[data-faq] .faq-toggle').forEach(button => {
+    button.addEventListener('click', () => {
+      const content = button.nextElementSibling;
+      const icon = button.querySelector('.faq-icon');
+      const isOpen = !content.classList.contains('hidden');
+
+      // Close all others
+      document.querySelectorAll('[data-faq] .faq-content').forEach(c => c.classList.add('hidden'));
+      document.querySelectorAll('[data-faq] .faq-icon').forEach(i => i.textContent = '+');
+      document.querySelectorAll('[data-faq] .faq-toggle').forEach(b => b.setAttribute('aria-expanded', 'false'));
+
+      if (!isOpen) {
+        content.classList.remove('hidden');
+        icon.textContent = '\u2212';
+        button.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+</script>

@@ -1,0 +1,134 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const events = [
+  {
+    title: "Entreprises",
+    image: "/images/escape-game-toulouse-team-building.webp",
+    description: "Team building, cohesion d'equipe, CE/CSE. Jusqu'a 72 participants, 340m2 privatisables, offre mobile dans vos locaux.",
+    link: "/evenement/entreprises/"
+  },
+  {
+    title: "Particuliers",
+    image: "/images/escape-game-toulouse-particuliers.webp",
+    description: "EVJF, EVG, anniversaire enfant, ado ou adulte, sortie entre amis ou en famille. Des 7 ans, accessible a tous.",
+    link: "/evenement/particuliers/"
+  },
+  {
+    title: "Institutions et scolaires",
+    image: "/images/escape-game-toulouse-institution.webp",
+    description: "Scolaires, jeunesse, BDE. Tarifs reduits de -10% a -35% selon taille de groupe. Pass Culture et ANCV acceptes.",
+    link: "/evenement/institutions-associations-scolaires/"
+  }
+];
+---
+
+<Layout title="Evenements Toulouse | Escape Game Tactisens - Activites insolites" description="Activites insolites pour sortir a Toulouse. Escape game immersif pour entreprises, particuliers, scolaires. EVJF, EVG, anniversaire, team building.">
+
+  <!-- ==================== SECTION 1 : HERO BANNER ==================== -->
+  <section class="relative min-h-[600px] lg:min-h-[90vh] flex flex-col">
+    <img
+      src="/images/escape-game-toulouse-tactisens-09.webp"
+      alt="Evenements Escape Game Toulouse Tactisens"
+      class="absolute inset-0 w-full h-full object-cover"
+    />
+    <div class="absolute inset-0 bg-black/30"></div>
+    <div class="relative z-10 flex-1 flex flex-col justify-center section-content pt-[186px] pb-5">
+      <div class="pb-[8vw]">
+        <!-- Spiral icon centered -->
+        <div class="flex justify-center mb-[50px]">
+          <img
+            src="/images/escape-game-toulouse-tactisens-31-bis.webp"
+            alt="Escape Game sensoriel Toulouse"
+            class="w-16 h-[60px] object-contain"
+          />
+        </div>
+
+        <!-- H1 -->
+        <h1 class="font-share text-bigger text-center uppercase tracking-[3px] leading-[1.2] font-normal text-[#b6b3b3] mb-5">
+          Vos evenements
+        </h1>
+
+        <!-- H2 -->
+        <h2 class="font-share text-[2.5rem] lg:text-gigantic text-center text-tac-white font-bold leading-none tracking-[-3px] mb-[70px]">
+          Organiser un evenement a Toulouse
+        </h2>
+
+        <!-- CTA -->
+        <div class="flex justify-center">
+          <a
+            href="/reservation/"
+            class="btn-outline-white font-share text-[19px] uppercase tracking-[2px] px-[38px] py-5"
+          >
+            Reservez votre evenement !
+          </a>
+        </div>
+      </div>
+
+      <!-- Breadcrumb -->
+      <nav class="text-sm text-white/60 text-center mt-4" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-white no-underline text-white/60">Accueil</a>
+        <span class="mx-2">/</span>
+        <span class="text-white/80">Evenements</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 2 : INTRO ==================== -->
+  <section class="bg-tac-black py-20">
+    <div class="section-content text-center">
+      <p class="font-share text-bigger text-tac-white font-normal leading-[1.4]">
+        Tactisens, c'est bien plus qu'un escape game. C'est une experience immersive a Toulouse pour tous les publics.
+        Familles, groupes d'amis, entreprises, scolaires, associations. Nos salles s'adaptent a vos envies et a votre groupe.
+      </p>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 3 : 3 CARDS ==================== -->
+  <section class="bg-tac-dark-blue py-20 lg:py-28">
+    <div class="section-content">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {events.map((event) => (
+          <a href={event.link} class="group block bg-tac-black border-2 border-tac-orange/30 hover:border-tac-orange transition-all duration-300 overflow-hidden no-underline">
+            <div class="aspect-[4/3] overflow-hidden">
+              <img
+                src={event.image}
+                alt={event.title}
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              />
+            </div>
+            <div class="p-8">
+              <h3 class="font-share text-large uppercase text-tac-orange mb-3">
+                {event.title}
+              </h3>
+              <p class="text-tac-light-gray mb-6 text-sm leading-relaxed">
+                {event.description}
+              </p>
+              <span class="text-tac-orange text-sm font-semibold font-share uppercase tracking-[1px]">
+                Decouvrir &rarr;
+              </span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 4 : CTA ==================== -->
+  <section class="bg-tac-black py-20 lg:py-28">
+    <div class="section-content text-center">
+      <h2 class="font-share text-larger lg:text-colossal uppercase mb-6">
+        Pret a vivre l'<span class="text-tac-orange">experience</span> ?
+      </h2>
+      <p class="text-tac-light-gray text-big max-w-2xl mx-auto mb-10">
+        Reservez votre creneau en ligne ou contactez-nous pour organiser votre evenement sur mesure.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="/reservation/" class="btn-orange">Reserver en ligne</a>
+        <a href="/contact/" class="btn-outline-orange">Nous contacter</a>
+      </div>
+    </div>
+  </section>
+
+</Layout>

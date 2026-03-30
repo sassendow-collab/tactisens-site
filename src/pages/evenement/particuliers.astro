@@ -1,0 +1,435 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const faqItems = [
+  {
+    question: "Quelles sont les offres dédiées aux particuliers ?",
+    answer: "EVJF, EVG, anniversaires (enfant, ado, adulte), sorties entre amis ou en famille. Nous proposons aussi la privatisation de nos espaces et des formules personnalisées pour faire de votre événement un moment inoubliable."
+  },
+  {
+    question: "À partir de quel âge peut-on jouer ?",
+    answer: "L'Aventure Sensorielle est accessible dès 7 ans. The Bunker est accessible dès 10 ans. Les enfants sont accompagnés par un game master dédié tout au long de l'expérience."
+  },
+  {
+    question: "Vos Escape Games sont-ils uniquement pour les jeunes ?",
+    answer: "Pas du tout ! Nos escape games sont accessibles à tous les âges, sans limite. L'expérience repose sur la réflexion, l'observation et la coopération. Aucun effort physique particulier n'est requis. Seniors bienvenus !"
+  },
+  {
+    question: "Une femme enceinte peut-elle jouer ?",
+    answer: "Oui, nos escape games ne comportent aucun effort physique intense. Cependant, l'Aventure Sensorielle se déroule dans l'obscurité. N'hésitez pas à nous contacter pour en discuter."
+  },
+  {
+    question: "Combien de personnes peuvent jouer par équipe ?",
+    answer: "Chaque équipe peut compter de 3 à 12 joueurs selon l'activité choisie. Pour les groupes plus grands, nous organisons plusieurs sessions en parallèle avec un classement entre équipes."
+  },
+  {
+    question: "Quel est le nombre maximum de joueurs par équipe ?",
+    answer: "Nous pouvons accueillir jusqu'à 72 participants en simultané grâce à nos deux parcours et notre système de rotation. Idéal pour les grands groupes, les fêtes et les célébrations."
+  }
+];
+---
+
+<Layout title="Sortir à Toulouse entre amis ou en famille | Tactisens Escape Game" description="Escape game Toulouse pour particuliers. EVJF, EVG, anniversaire, sortie entre amis ou en famille. Dès 7 ans, accessible à tous.">
+
+  <!-- ==================== SECTION 1 : HERO ==================== -->
+  <section class="relative min-h-[600px] lg:min-h-[90vh] flex flex-col">
+    <img
+      src="/images/escape-game-toulouse-tactisens-05.webp"
+      alt="Sortir à Toulouse entre amis ou en famille Tactisens"
+      class="absolute inset-0 w-full h-full object-cover"
+    />
+    <div class="absolute inset-0 bg-black/30"></div>
+    <div class="relative z-10 flex-1 flex flex-col justify-center section-content pt-[186px] pb-5">
+      <div class="pb-[8vw]">
+        <!-- Spiral icon centered -->
+        <div class="flex justify-center mb-[50px]">
+          <img
+            src="/images/escape-game-toulouse-tactisens-31-bis.webp"
+            alt="Escape Game Toulouse Tactisens"
+            class="w-16 h-[60px] object-contain"
+          />
+        </div>
+
+        <!-- H1 -->
+        <h1 class="font-share text-bigger text-center uppercase tracking-[3px] leading-[1.2] font-normal text-[#b6b3b3] mb-5">
+          Sortir à Toulouse entre amis ou en famille
+        </h1>
+
+        <!-- H2 -->
+        <h2 class="font-share text-[2.5rem] lg:text-gigantic text-center text-tac-white font-bold leading-none tracking-[-3px] mb-[70px]">
+          Activités insolites pour sortir à Toulouse
+        </h2>
+
+        <!-- CTA -->
+        <div class="flex justify-center">
+          <a
+            href="/reservation/"
+            class="btn-outline-white font-share text-[19px] uppercase tracking-[2px] px-[38px] py-5"
+          >
+            Réservez votre aventure !
+          </a>
+        </div>
+      </div>
+
+      <!-- Breadcrumb -->
+      <nav class="text-sm text-white/60 text-center mt-4" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-white no-underline text-white/60">Accueil</a>
+        <span class="mx-2">/</span>
+        <a href="/evenement/" class="hover:text-white no-underline text-white/60">Évènements</a>
+        <span class="mx-2">/</span>
+        <span class="text-white/80">Particuliers</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 2 : INTRO PARAGRAPH ==================== -->
+  <section class="bg-tac-black py-20">
+    <div class="section-content text-center max-w-4xl mx-auto">
+      <p class="font-share text-bigger text-tac-white font-normal leading-[1.4]">
+        Tactisens est le lieu idéal pour organiser une activité originale à Toulouse en famille, entre amis ou entre collègues. Vivez un moment d'évasion divertissant. Plongez dans un univers de mystère, de défis et de rires avec les Escape Games et activités insolites de Tactisens Escape Game Toulouse ! Que ce soit pour célébrer un EVJF, un EVG, un anniversaire ou pour passer un bon moment en famille ou entre amis, nos activités vous feront vivre une aventure inoubliable. Êtes-vous prêts à relever le défi ?
+      </p>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 3 : TWO CARDS (Adultes / Enfants-Famille) ==================== -->
+  <section class="bg-tac-black py-20 lg:py-28">
+    <div class="section-content">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+        <!-- Card 1: Adultes -->
+        <div class="group">
+          <div class="overflow-hidden mb-6">
+            <img
+              src="/images/sortie-insolite-toulouse-amis-famille.webp"
+              alt="Sortie insolite Toulouse adultes entre amis"
+              class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500"
+              loading="lazy"
+            />
+          </div>
+          <h3 class="font-share text-large font-bold text-tac-orange mb-4">Adultes</h3>
+          <div class="space-y-2 mb-5">
+            <a href="/evenement/particuliers/evjf/" class="block font-mulish text-body text-tac-white/80 hover:text-tac-orange transition-colors">EVJF</a>
+            <a href="/evenement/particuliers/evg/" class="block font-mulish text-body text-tac-white/80 hover:text-tac-orange transition-colors">EVG</a>
+            <a href="/evenement/particuliers/anniversaire-adulte/" class="block font-mulish text-body text-tac-white/80 hover:text-tac-orange transition-colors">Anniversaire adulte</a>
+          </div>
+          <a href="/evenement/particuliers/evjf/" class="font-share text-tac-orange uppercase tracking-[2px] text-body hover:underline">découvrir &rarr;</a>
+        </div>
+
+        <!-- Card 2: Enfants - Famille -->
+        <div class="group">
+          <div class="overflow-hidden mb-6">
+            <img
+              src="/images/sortie-insolite-toulouse-famille-amis.webp"
+              alt="Sortie insolite Toulouse enfants famille"
+              class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500"
+              loading="lazy"
+            />
+          </div>
+          <h3 class="font-share text-large font-bold text-tac-orange mb-4">Enfants - Famille</h3>
+          <div class="space-y-2 mb-5">
+            <a href="/evenement/particuliers/anniversaire-enfant/" class="block font-mulish text-body text-tac-white/80 hover:text-tac-orange transition-colors">Anniversaire enfant</a>
+            <a href="/evenement/particuliers/anniversaire-ado/" class="block font-mulish text-body text-tac-white/80 hover:text-tac-orange transition-colors">Anniversaire ado</a>
+            <a href="/evenement/particuliers/sortie-famille/" class="block font-mulish text-body text-tac-white/80 hover:text-tac-orange transition-colors">Sortie en famille</a>
+          </div>
+          <a href="/evenement/particuliers/sortie-famille/" class="font-share text-tac-orange uppercase tracking-[2px] text-body hover:underline">découvrir &rarr;</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 4 : NOS PRESTATIONS ==================== -->
+  <section class="relative py-[120px]">
+    <img
+      src="/images/escape-game-toulouse-tactisens-05.webp"
+      alt="Prestations particuliers Toulouse Tactisens"
+      class="absolute inset-0 w-full h-full object-cover"
+    />
+    <div class="absolute inset-0 bg-black/70"></div>
+    <div class="relative z-10 section-content">
+
+      <!-- Spiral + heading -->
+      <div class="flex items-start gap-0 justify-center mb-8">
+        <img
+          src="/images/escape-game-toulouse-tactisens-31.webp"
+          alt=""
+          class="w-[49px] h-[50px] shrink-0"
+        />
+        <h2 class="pl-5 font-share text-[2rem] lg:text-colossal font-bold tracking-[-2px] leading-none text-center">
+          <span class="text-tac-white">Nos prestations pour sortir à Toulouse</span><br>
+          <span class="text-tac-orange">entre amis ou en famille</span>
+        </h2>
+      </div>
+
+      <p class="font-mulish text-big font-semibold leading-[1.6] text-center max-w-3xl mx-auto mb-16">
+        Tactisens vous propose un accueil et des Escape Games personnalisés pour faire de votre sortie à Toulouse un événement mémorable.
+      </p>
+
+      <!-- Cards -->
+      <div class="space-y-8">
+
+        <!-- Card 1: Privatisation -->
+        <div class="border border-tac-orange/30 flex flex-col lg:flex-row overflow-hidden">
+          <div class="lg:w-[35%] shrink-0">
+            <img
+              src="/images/activite-originale-toulouse-pas-cher.webp"
+              alt="Privatisation événements entre amis famille Toulouse"
+              class="w-full h-full object-cover aspect-[4/3] lg:aspect-auto"
+              loading="lazy"
+            />
+          </div>
+          <div class="p-8 lg:p-10 flex flex-col justify-center">
+            <h3 class="font-share text-large font-bold text-tac-white mb-4">Privatisation pour vos événements entre amis ou en famille</h3>
+            <p class="font-mulish text-body text-tac-white/80 leading-relaxed mb-4">
+              Profitez de l'ensemble de nos espaces pour votre événement privé. Un cadre unique pour célébrer vos moments importants.
+            </p>
+            <div class="space-y-3 mt-2">
+              <p class="font-mulish text-body font-semibold leading-[1.4] pl-[35px] relative">
+                <img src="/images/true.svg" alt="" class="w-3 inline-block absolute left-0 top-1" />
+                340 m² de surface totale
+              </p>
+              <p class="font-mulish text-body font-semibold leading-[1.4] pl-[35px] relative">
+                <img src="/images/true.svg" alt="" class="w-3 inline-block absolute left-0 top-1" />
+                Accueil réception de 80 m²
+              </p>
+              <p class="font-mulish text-body font-semibold leading-[1.4] pl-[35px] relative">
+                <img src="/images/true.svg" alt="" class="w-3 inline-block absolute left-0 top-1" />
+                Salle de réunion de 60 m²
+              </p>
+              <p class="font-mulish text-body font-semibold leading-[1.4] pl-[35px] relative">
+                <img src="/images/true.svg" alt="" class="w-3 inline-block absolute left-0 top-1" />
+                À partir de 2h ou à la journée
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Fête d'anniversaire originale -->
+        <div class="border border-tac-orange/30 flex flex-col lg:flex-row overflow-hidden">
+          <div class="p-8 lg:p-10 flex flex-col justify-center">
+            <h3 class="font-share text-large font-bold text-tac-white mb-4">Fête d'anniversaire originale</h3>
+            <p class="font-mulish text-body text-tac-white/80 leading-relaxed">
+              Offrez à vos amis et à vos proches un cadeau et une fête unique dont ils se souviendront ! Nos jeux, nos décors, nos scénarios, vous permettront d'être les véritables héros du jour ! Si vous concoctez un anniversaire surprise, nous pouvons faire de petits aménagements sympas et originaux pendant les jeux. Effet de surprise, émotion et succès garantis ! Quoi de mieux pour une activité insolite à Toulouse en famille ou entre amis ?
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 3: Sortie entre amis -->
+        <div class="border border-tac-orange/30 flex flex-col lg:flex-row overflow-hidden">
+          <div class="lg:w-[35%] shrink-0">
+            <img
+              src="/images/sortie-anniversaire-original-toulouse-amis.webp"
+              alt="Sortie entre amis Toulouse célébrations"
+              class="w-full h-full object-cover aspect-[4/3] lg:aspect-auto"
+              loading="lazy"
+            />
+          </div>
+          <div class="p-8 lg:p-10 flex flex-col justify-center">
+            <h3 class="font-share text-large font-bold text-tac-white mb-4">Une sortie entre amis à Toulouse pour toutes les célébrations !</h3>
+            <p class="font-mulish text-body text-tac-white/80 leading-relaxed">
+              Réunion familiale, copains de promo, enterrement de vie de jeune fille ou de garçon, fête de majorité, anniversaire de mariage, etc. Nous pouvons personnaliser votre événement chez Tactisens Escape Game Toulouse.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 4: Carte cadeau -->
+        <div class="border border-tac-orange/30 flex flex-col lg:flex-row overflow-hidden">
+          <div class="lg:w-[35%] shrink-0">
+            <img
+              src="/images/sortie-originale-toulouse-famille-amis.webp"
+              alt="Carte cadeau Tactisens Escape Game Toulouse"
+              class="w-full h-full object-cover aspect-[4/3] lg:aspect-auto"
+              loading="lazy"
+            />
+          </div>
+          <div class="p-8 lg:p-10 flex flex-col justify-center">
+            <h3 class="font-share text-large font-bold text-tac-white mb-4">Offrez un cadeau original avec une carte cadeau Tactisens !</h3>
+            <p class="font-mulish text-body text-tac-white/80 leading-relaxed mb-4">
+              Vous cherchez une idée de cadeau originale ? Offrez une expérience inoubliable avec nos cartes cadeaux Tactisens ! Valables 1 an, elles permettent de vivre l'Aventure Sensorielle ou The Bunker, en famille ou entre amis.
+            </p>
+            <a href="/carte-cadeau/" class="font-share text-tac-orange uppercase tracking-[2px] text-body hover:underline">Découvrir les cartes cadeaux &rarr;</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 5 : AVIS ==================== -->
+  <section class="relative py-[120px]">
+    <img
+      src="/images/escape-game-toulouse-tactisens-02.webp"
+      alt="Avis escape game Toulouse particuliers"
+      class="absolute inset-0 w-full h-full object-cover"
+    />
+    <div class="absolute inset-0 bg-[#f050240f]"></div>
+    <div class="relative z-10 max-w-[1440px] mx-auto px-5">
+
+      <!-- Spiral + heading -->
+      <div class="flex items-start gap-0 mb-[27px]">
+        <img
+          src="/images/escape-game-toulouse-tactisens-14.webp"
+          alt="Avis escape game Toulouse"
+          class="w-[65px] h-16 object-contain shrink-0"
+        />
+        <h2 class="ml-5 font-share text-[3.56rem] tracking-[-3px] text-tac-white leading-tight">
+          Avis
+        </h2>
+      </div>
+
+      <!-- 3 review cards -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-5 mb-12">
+
+        <!-- TripAdvisor -->
+        <div class="bg-tac-white text-tac-black min-h-[286px] p-10 pb-5 flex flex-col">
+          <ul class="list-disc pl-5 flex-1 space-y-2">
+            <li><em><strong>Un moment inoubliable avec nos enfants.</strong></em></li>
+            <li><em><strong>Excellent moment entre amis !</strong></em></li>
+            <li><em><strong>Entre amis ou en famille, vous êtes certains de passer un très bon moment.</strong></em></li>
+            <li><em><strong>Idéal pour une sortie en famille !</strong></em></li>
+            <li><em><strong>Génial, les enfants ont adoré !</strong></em></li>
+            <li><em><strong>Une super activité pour un anniversaire !</strong></em></li>
+          </ul>
+          <hr class="separator-orange mt-6 mb-5" />
+          <div class="flex justify-center">
+            <img
+              src="/images/tactisens-tripadvisor.webp"
+              alt="Avis Tripadvisor Tactisens Escape Game Toulouse"
+              class="w-[158px] h-[60px] object-contain"
+            />
+          </div>
+        </div>
+
+        <!-- Google -->
+        <div class="bg-tac-white text-tac-black min-h-[286px] p-10 pb-5 flex flex-col">
+          <ul class="list-disc pl-5 flex-1 space-y-2">
+            <li><em><strong>Escape Game vraiment sympa !</strong></em></li>
+            <li><em><strong>Un merveilleux moment.</strong></em></li>
+            <li><em><strong>Superbe expérience pour l'Escape Game !</strong></em></li>
+            <li><em><strong>Nous avons passé un super moment !</strong></em></li>
+            <li><em><strong>Très bonne idée de cadeau !</strong></em></li>
+            <li><em><strong>Parfait pour un EVJF !</strong></em></li>
+          </ul>
+          <hr class="separator-orange mt-6 mb-5" />
+          <div class="flex justify-center">
+            <img
+              src="/images/tactisens-google.webp"
+              alt="Avis Google Tactisens Escape Game Toulouse"
+              class="w-[159px] h-[60px] object-contain"
+            />
+          </div>
+        </div>
+
+        <!-- Facebook -->
+        <div class="bg-tac-white text-tac-black min-h-[286px] p-10 pb-5 flex flex-col">
+          <ul class="list-disc pl-5 flex-1 space-y-2">
+            <li><em><strong>Escape game extraordinaire</strong></em></li>
+            <li><em><strong>Accueil chaleureux et locaux de qualité.</strong></em></li>
+            <li><em><strong>Un excellent moment ludique !</strong></em></li>
+            <li><em><strong>Idéal pour un anniversaire original !</strong></em></li>
+            <li><em><strong>Superbe activité en famille !</strong></em></li>
+            <li><em><strong>On recommande vivement !</strong></em></li>
+          </ul>
+          <hr class="separator-orange mt-6 mb-5" />
+          <div class="flex justify-center">
+            <img
+              src="/images/tactisens-facebook.webp"
+              alt="Avis Facebook Tactisens Escape Game Toulouse"
+              class="w-[159px] h-[60px] object-contain"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 6 : CADEAU ESCAPE GAME ==================== -->
+  <section class="bg-tac-white py-[120px]">
+    <div class="section-content">
+      <div class="flex flex-col lg:flex-row items-center gap-10">
+
+        <!-- Left: gift card image -->
+        <div class="lg:w-[48%]">
+          <img
+            src="/images/activite-insolite-toulouse-cadeau.webp"
+            alt="Carte cadeau escape game Toulouse Tactisens"
+            class="w-full aspect-[4/3] object-cover"
+            loading="lazy"
+          />
+        </div>
+
+        <!-- Right: text -->
+        <div class="lg:flex-1">
+          <h5 class="font-share text-bigger uppercase text-tac-orange mb-6">
+            OFFREZ UN CADEAU ESCAPE GAME... ET CRÉEZ LA SURPRISE AVEC L'AVENTURE SENSORIELLE
+          </h5>
+          <p class="font-mulish text-big font-semibold leading-[1.6] text-tac-black mb-5">
+            Vous cherchez un cadeau original pour surprendre vos proches ? Offrez-leur une expérience immersive et ludique chez Tactisens ! Nos cartes cadeaux sont valables 1 an et utilisables sur toutes nos salles.
+          </p>
+          <p class="font-mulish text-big font-semibold leading-[1.6] text-tac-black mb-8">
+            Une activité ludique et immersive à partager en famille ou entre amis. Le cadeau idéal pour créer des souvenirs uniques et vivre une aventure inoubliable.
+          </p>
+          <a href="/carte-cadeau/" class="btn-orange font-share text-[1.1rem] uppercase tracking-[2px] px-[38px] py-[17px]">
+            OFFRIR UN BON CADEAU
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 7 : FAQ ==================== -->
+  <section class="bg-tac-light-gray py-[120px]" itemscope itemtype="https://schema.org/FAQPage">
+    <div class="section-content max-w-4xl mx-auto">
+
+      <!-- Spiral + heading -->
+      <div class="flex items-start gap-0 mb-12">
+        <img
+          src="/images/escape-game-toulouse-tactisens-31.webp"
+          alt="FAQ Tactisens Escape Game Toulouse"
+          class="w-[49px] h-[50px] shrink-0"
+        />
+        <h2 class="pl-5 font-share text-[2rem] lg:text-colossal font-bold tracking-[-2px] leading-none uppercase text-tac-black">
+          FAQ
+        </h2>
+      </div>
+
+      <!-- FAQ items -->
+      <div class="space-y-0">
+        {faqItems.map((item) => (
+          <div class="faq-item border-b border-black/10" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" data-faq>
+            <button class="faq-toggle w-full flex items-center justify-between py-5 text-left cursor-pointer" aria-expanded="false">
+              <h5 class="font-share text-bigger font-bold text-tac-black pr-4" itemprop="name">{item.question}</h5>
+              <span class="faq-icon font-share text-2xl text-tac-orange shrink-0 transition-transform">+</span>
+            </button>
+            <div class="faq-content hidden pb-5" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <p class="font-mulish text-body text-tac-black leading-relaxed" itemprop="text">{item.answer}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<script>
+  // FAQ accordion toggle with data-faq attribute
+  document.querySelectorAll('[data-faq] .faq-toggle').forEach(button => {
+    button.addEventListener('click', () => {
+      const content = button.nextElementSibling;
+      const icon = button.querySelector('.faq-icon');
+      const isOpen = !content.classList.contains('hidden');
+
+      // Close all others
+      document.querySelectorAll('[data-faq] .faq-content').forEach(c => c.classList.add('hidden'));
+      document.querySelectorAll('[data-faq] .faq-icon').forEach(i => i.textContent = '+');
+      document.querySelectorAll('[data-faq] .faq-toggle').forEach(b => b.setAttribute('aria-expanded', 'false'));
+
+      if (!isOpen) {
+        content.classList.remove('hidden');
+        icon.textContent = '\u2212';
+        button.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+</script>
